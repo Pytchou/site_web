@@ -13,6 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
+ * Route accueil
+ */
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*
+ * Route de réglementation
+ */
+
+Route::get('/cgu','App\Http\Controllers\Reglementation\ReglementationController@index_cgu');
+Route::get('/rgpd','App\Http\Controllers\Reglementation\ReglementationController@index_rgpd');
+Route::get('/mentions-legales','App\Http\Controllers\Reglementation\ReglementationController@index_mentions_legales');

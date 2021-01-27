@@ -3,33 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Site web</title>
-    <link href="{{asset('css/style.css')}}" rel="stylesheet">
-    <link href="{{asset('css/reboot.css')}}" rel="stylesheet">
-    <link href="{{asset('css/responsive.css')}}" rel="stylesheet">
-</head>
-
+    <link href="css/app.css" rel="stylesheet"></head>
 <body>
 <header>
 
 </header>
-
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+     viewBox="0 0 141.73 5.67" style="enable-background:new 0 0 141.73 5.67;" xml:space="preserve">
+<style type="text/css">
+    .st0{fill:#0F388E;}
+</style>
+    <polygon class="st0" points="141.73,4.07 141.73,5.67 0,5.67 0,0 "/>
+</svg>
 <footer>
     <footer>
-        <section class="row wrap" id="cut">
-        </section>
         <section class="row wrap" id="foot">
             <div class="xLarge-4 large-4 medium-12 small-12 xSmall-12">
                 <div class="padd-around">
                     <p>Informations</p>
                     <ul>
                         <li>
-                            <a href="#">RGPD</a>
+                            <a href="/rgpd">RGPD</a>
                         </li>
                         <li>
-                            <a href="#">CGU</a>
+                            <a href="/cgu">CGU</a>
                         </li>
                         <li>
-                            <a href="#">Mentions Légales</a>
+                            <a href="/mentions-legales">Mentions Légales</a>
                         </li>
                     </ul>
                 </div>
@@ -40,10 +42,10 @@
                         Nos différents partenaires
                     </p>
                     <ul>
-                        <li>Partenaire 1</li>
-                        <li>Partenaire 2</li>
-                        <li>Partenaire 3</li>
-                        <li>Partenaire 4</li>
+                        <li><a href="https://www.banquealimentaire.org/" target="_blank">Les banques alimentaires</a></li>
+                        <li><a href="https://www.restosducoeur.org//" target="_blank">Les restos du coeur</a></li>
+                        <li><a href="https://www.secourspopulaire.fr/" target="_blank">Le secours populaire</a></li>
+                        <li><a href="https://www.croix-rouge.fr/" target="_blank">La croix rouge</a></li>
                     </ul>
                 </div>
             </div>
@@ -62,6 +64,6 @@
             </div>
         </section>
     </footer>
-
+    <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>

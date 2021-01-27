@@ -35,11 +35,11 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-    font-family: 'texte-light', Tahoma, Geneva, sans-serif;
+    font-family: 'Roboto', Tahoma, Geneva, sans-serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'titre-regular', Tahoma, Geneva, sans-serif;
+    font-family: 'Roboto', Tahoma, Geneva, sans-serif;
 }
 
 /* HTML5 display-role reset for older browsers */

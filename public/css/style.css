@@ -1,0 +1,130 @@
+@import url(reboot.css);
+@import url(responsive.css);
+section {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.margin-around {
+    display: flex;
+    margin: 20px;
+    width: calc(100% - 40px);
+}
+
+.padd-around {
+    display: flex;
+    padding: 20px;
+    width: calc(100% - 40px);
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 25px;
+    height: 30px;
+    position: relative;
+    left: 0;
+    transition: all linear 0.2s;
+}
+
+.burger-closed {
+    left: 5px!important;
+}
+
+.burger-closed .burger-line:nth-child(2) {
+    opacity: 0!important;
+}
+
+.burger-line {
+    height: 2px;
+    background-color: #FFF;
+    width: 100%;
+    border-radius: 100px;
+    display: flex;
+    transform-origin: 4%;
+    transform: rotate(0deg);
+    transition: all linear 0.2s;
+}
+
+.burger-line:nth-child(2) {
+    margin: 6px 0;
+}
+
+.burger-closed .burger-line:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.burger-closed .burger-line:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+#burger-container p {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+#footer-logo {
+    width: 30px;
+}
+
+#cut{
+    border-color: transparent transparent #0F388E transparent;
+    border-width: 0 0 40px 2000px;
+    border-style: solid solid solid dashed;
+    width: 100%;
+ }
+#foot {
+    background: rgb(68,113,208);
+    background: linear-gradient(0deg, rgba(68,113,208,1) 0%, rgba(15,56,142,1) 86%);
+}
+footer {
+    padding: 20px;
+}
+
+footer .padd-around {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+footer .padd-around ul li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 5px 0;
+}
+
+
+footer .padd-around p {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+footer div{
+    color: white;
+}

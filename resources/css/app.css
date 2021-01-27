@@ -1,23 +1,2 @@
-.body {
-    background-color: black;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    
-}
-
-#head1 {
-    background-color:#0F388E;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    color-gradient: rgba(15,150,2)
-}
-
-#head2 {
-    background-color: aqua;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
+@import "style.css";
+@import "responsive.css";

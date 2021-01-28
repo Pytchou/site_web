@@ -167,9 +167,10 @@ footer div {
     max-width: 540px;
 }
 
-.divheader {
+#divheader {
     display: flex;
     position: relative;
+    height: 50vh;
 }
 
 .divheader>:nth-child(1) {
@@ -181,6 +182,11 @@ footer div {
     margin-top: 100px;
 }
 
+#left{
+
+    left: 15px;
+}
+
 .bienvenue {
     line-height: 1.48;
     max-width: 400px;
@@ -190,7 +196,7 @@ footer div {
     letter-spacing: normal;
     text-align: center;
     position: absolute;
-    top: 145px;
+    top: 160px;
     left: 21vw;
     color: #FFFF;
 }

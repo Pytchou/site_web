@@ -10,15 +10,37 @@
           crossorigin=""/>
     <script src="https://kit.fontawesome.com/7be350b690.js" crossorigin="anonymous"></script>
 <body>
-    <header class="xLarge-12 large-12 medium-12 small-12 xSmall-12">
-        <section>
-            <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12 divheader">
-                <div>
+    <header id="bleu">
+
+        <section class="row wrap">
+            <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12">
+                <div class="padd-around center">
+                    <nav>
+                        <ul>
+                            <li class="texthead white">
+                                <a href="/">Accueil</a>
+                                <a href="/register">Créer un compte</a>
+                                <a href="/mentions-legales">Information</a>
+                            </li>
+                        </ul>
+
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+    </header>
+
+    <main>
+
+        <section class="row wrap">
+            <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12 " id="divheader">
+                <div class="padd-around">
                     <p class="bienvenue">Bonjour et bienvenue</p>
                     <img class="front" src="{{asset('media/image/front.svg')}}">
                     <img class="ombre" src="{{asset('media/image/ombre.svg')}}">
                 </div>
-                <div class="margin">
+                <div class="padd-around center" id="left">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Nobis fuga vitae suscipit neque. Molestiae exercitationem, ratione quia,
                     ad amet nam laboriosam minus aut voluptatem illo laudantium sequi temporibus,
@@ -26,43 +48,41 @@
                 </div>
             </div>
         </section>
-    </header>
-
-    <main>
 
         <section class="row wrap">
 
             <div class="list">
-                <div class="item js-marker" data-lat="44.837528228759766" data-lng="-0.5740066766738892" data-name="Centre Bordeaux Croix Rouge" data-place=""></div>
-                <div class="item js-marker" data-lat="44.8356819152832" data-lng="-0.5753112435340881" data-name="Centre Bordeaux Banque Alimentaire"></div>
-                <div class="item js-marker" data-lat="44.8302308" data-lng="-0.5618266" data-name="Centre Bordeaux Resto du Coeur"></div>
-                <div class="item js-marker" data-lat="44.8325" data-lng="-0.6338" data-name="Centre Mérignac Secours Populaire"></div>
-                <div class="item js-marker" data-lat="44.8749" data-lng="-0.5178" data-name="Centre Lormont Secours Populaire"></div>
-                <div class="item js-marker" data-lat="44.7123637" data-lng="-1.0528869" data-name="Centre Lanton Resto du Coeur"></div>
-                <div class="item js-marker" data-lat="44.914859771728516" data-lng="-0.4276067018508911" data-name="Centre Loubès Resto du Coeur"></div>
+                <div class="item js-marker" data-lat="44.837528228759766" data-lng="-0.5740066766738892" data-place_restante="128" data-title="Centre Bordeaux Croix Rouge" data-email="Aucune donnée" data-phone="05 56 52 34 85" data-address="50 Rue Ferrere"></div>
+                <div class="item js-marker" data-lat="44.8356819152832" data-lng="-0.5753112435340881" data-place_restante="185" data-title="Centre Bordeaux Banque Alimentaire" data-email="ba330@banquealimentaire.org" data-phone="05 56 43 10 63" data-address="15 rue Bougainville"></div>
+                <div class="item js-marker" data-lat="44.8302308" data-lng="-0.5618266" data-title="Centre Bordeaux Resto du Coeur" data-place_restante="85" data-email=" contact@restosducoeur.org" data-phone="05 57 95 87 55" data-address="14 Rue du Fort Louis"></div>
+                <div class="item js-marker" data-lat="44.8325" data-lng="-0.6338" data-title="Centre Mérignac Secours Populaire" data-place_restante="45" data-email="secours-populaire-francais-merignac@orange.fr" data-phone="05 56 45 29 81" data-address="19 Avenue du Château d'Eau"></div>
+                <div class="item js-marker" data-lat="44.8749" data-lng="-0.5178" data-title="Centre Lormont Secours Populaire"  data-place_restante="96" data-email="info@secourspopulaire.fr" data-phone="05 56 06 14 24" data-address="8 Rue du Colonel Fabien"></div>
+                <div class="item js-marker" data-lat="44.7123637" data-lng="-1.0528869" data-title="Centre Lanton Resto du Coeur" data-place_restante="49" data-email="contact@restosducoeur.org" data-phone="Aucune Donnée" data-address="5 Place des Sports"></div>
+                <div class="item js-marker" data-lat="44.914859771728516" data-lng="-0.4276067018508911" data-place_restante="155" data-title="Centre St Loubès Resto du Coeur" data-email="ad33.st-loubes@restosducoeur.org" data-phone="05 56 68 60 42" data-address="41 Rue du Stade"></div>
             </div>
+
 
             <div class="map" id="map"></div>
 
             <div class="partnership_card" id="js-container">
 
                 <div class="testa">
-                    <p class="price-offers">Nom Association</p>
+                    <p class="price-offers" id="title">Nom Association</p>
+                    <p id="part_title"></p>
                 </div>
 
                 <div class="txt-offers-left">
                     <div class="container-text">
-                        <p class="components">Nombres places restantes: </p>
-                        <p class="components">Email :</p>
-                        <p class="components">Téléphone :</p>
-                        <p class="components">Adresse :</p>
+                        <p class="components">Nombres places restantes: <span id="place_restante"></span></p>
+                        <p class="components">Email : <span id="email"></span></p>
+                        <p class="components">Tel :<span id="phone"></span></p>
+                        <p class="components">Adresse : <span id="address"></span></p>
                     </div>
-                </div>
 
                 <div class="container-btns">
                     <div class="btns-offers">
                         <i class="fas fa-map-marker-alt"></i>
-                        <a href="/register" target="_blank"><p style="padding: 10px;">Nous rejoindre</p></a>
+                        <a href="/register" target="_blank"><p>Nous rejoindre</p></a>
                     </div>
                 </div>
 

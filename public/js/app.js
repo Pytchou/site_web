@@ -1902,12 +1902,15 @@ map.addLayer(layer);
  * Création des markers sur la cartes
  */
 
-function marker(lat, lng) {
-  L.marker([lat, lng]).addTo(map);
+function marker(lat, lng, titre, place_restante, email, phone, address) {
+  var chaine = titre + ';' + place_restante + ';' + email + ';' + phone + ';' + address;
+  L.marker([lat, lng], {
+    alt: chaine
+  }).addTo(map);
 }
 
 Array.from(document.querySelectorAll('.js-marker')).forEach(function (item) {
-  marker(item.dataset.lat, item.dataset.lng, item.dataset.name);
+  marker(item.dataset.lat, item.dataset.lng, item.dataset.title, item.dataset.place_restante, item.dataset.email, item.dataset.phone, item.dataset.address);
 });
 /*
  * Lancement des popups des partenaires après un click
@@ -1915,6 +1918,13 @@ Array.from(document.querySelectorAll('.js-marker')).forEach(function (item) {
 
 document.addEventListener("click", function (event) {
   if (event.target.classList.contains("leaflet-marker-icon")) {
+    var alt = event.target.alt;
+    var alt_split = alt.split(';');
+    document.getElementById('title').innerHTML = alt_split[0];
+    document.getElementById('place_restante').innerHTML = alt_split[1];
+    document.getElementById('email').innerHTML = alt_split[2];
+    document.getElementById('phone').innerHTML = alt_split[3];
+    document.getElementById('address').innerHTML = alt_split[4];
     document.getElementById("js-container").animate([{
       transform: "translateX(50px)",
       opacity: 0
@@ -1930,6 +1940,7 @@ document.addEventListener("click", function (event) {
     document.getElementById("js-container").classList.add("block");
   }
 });
+console.log(document.getElementById("part_title").innerText);
 
 /***/ }),
 

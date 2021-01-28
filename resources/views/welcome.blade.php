@@ -11,9 +11,6 @@
 </header>
 
 <main>
-
-    <!-- <img src="{{asset('media/images/footer-form.svg')}}"> -->
-
     <section class="column wrap">
         <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12 column">
             <h1 class="padd-around center colab"> Certains de nos partenaires</h1>

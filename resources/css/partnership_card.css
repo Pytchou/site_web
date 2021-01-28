@@ -12,11 +12,10 @@
     color: #222222;
     box-shadow: 2px 2px 15px rgb(0 0 0 / 15%);
     border-radius: 15px;
-
     position: absolute;
     z-index: 999;
     right: 50px;
-    top: 600px;
+    top: 820px;
 }
 
 .testa {
@@ -29,11 +28,12 @@
 }
 
 .txt-offers-left {
-    margin: 0px 25px 0px 50px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     height: 30px;
+    margin: 62px 58px;
+    margin-bottom: -85px;
 }
 
 
@@ -61,6 +61,8 @@
 .components {
     line-height: 30px;
     font-size: 16px;
+    margin-top: -65px;
+    white-space: nowrap;
 }
 
 .btns-offers {
@@ -83,4 +85,12 @@
 
 .btns-offers a{
     padding: 15px;
+} 
+
+.leaflet-left {
+    left: 1840px !important;
+}
+
+.leaflet-top {
+    top: 380px !important;
 }

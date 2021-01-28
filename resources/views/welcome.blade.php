@@ -35,21 +35,26 @@
 
         <section class="row wrap">
             <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12 " id="divheader">
-                <div class="padd-around">
+                <div class="xLarge-7 large-7 medium-7 small-7 xSmall-7 padd-around" style="padding-top: 10px;">
                     <p class="bienvenue">Bonjour et bienvenue</p>
-                    <img class="front" src="{{asset('media/image/front.svg')}}">
-                    <img class="ombre" src="{{asset('media/image/ombre.svg')}}">
+                    <img class="front" src="{{asset('media/images/front.svg')}}">
+                    <img class="ombre" src="{{asset('media/images/ombre.svg')}}">
                 </div>
-                <div class="padd-around center" id="left">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Nobis fuga vitae suscipit neque. Molestiae exercitationem, ratione quia,
-                    ad amet nam laboriosam minus aut voluptatem illo laudantium sequi temporibus,
-                    mollitia culpa!
+                <div class="xLarge-5 large-5 medium-5 small-5 xSmall-5 padd-around center column">
+                    <h1 class="padd-around center"> Vous êtes sur notre site associatif </h1>
+                    <p id="resume"> Ici, vous pourrez rechercher des associations et même vous y inscrire bénévolement, vous verrez tout les moyens de contact de ces associations, l'adresse et le nombre de places restantes.</p>
                 </div>
             </div>
         </section>
 
         <section class="row wrap">
+
+            <img id="image-map" src="{{asset('media/images/image-map.svg')}}">
+            <div id="image-text" class="column">
+                <h3>Map des partenaires</h3>
+                <h4>Cliquez sur un marqueur</h4>
+                <h4>pour avoir plus d'infos</h4>
+            </div>
 
             <div class="list">
                 <div class="item js-marker" data-lat="44.837528228759766" data-lng="-0.5740066766738892" data-place_restante="128" data-title="Centre Bordeaux Croix Rouge" data-email="Aucune donnée" data-phone="05 56 52 34 85" data-address="50 Rue Ferrere"></div>
@@ -73,9 +78,9 @@
 
                 <div class="txt-offers-left">
                     <div class="container-text">
-                        <p class="components">Nombres places restantes: <span id="place_restante"></span></p>
+                        <p class="components">Nombres places restantes : <span id="place_restante"></span></p>
                         <p class="components">Email : <span id="email"></span></p>
-                        <p class="components">Tel :<span id="phone"></span></p>
+                        <p class="components">Tel : <span id="phone"></span></p>
                         <p class="components">Adresse : <span id="address"></span></p>
                     </div>
 
@@ -90,7 +95,8 @@
 
             </div>
         </section>
-
+        
+        
         <section class="column wrap">
             <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12 column">
                 <h1 class="padd-around center colab"> Certains de nos partenaires</h1>

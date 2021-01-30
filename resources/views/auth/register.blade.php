@@ -21,11 +21,10 @@
                 <form id="enregister-form" method="post">
                     <div class="box">
                         <select>
-                            <option>Option 1</option>
-                            <option>Option 2</option>
-                            <option>Option 3</option>
-                            <option>Option 4</option>
-                            <option>Option 5</option>
+                            <option>Croix Rouge</option>
+                            <option>Banque alimentaire</option>
+                            <option>Resto du coeur</option>
+                            <option>Secours populaire</option>
                         </select>
                     </div>
                     <label>Nom</label>
@@ -39,7 +38,7 @@
                     <button type="submit" class="btn">S'inscrire</button>
                 </form>
             </div>
-            <div class="padd-around center">
+            <div class="padd-around center" style="justify-content: center; text-align: center;">
                 <p>Avez-vous déjà un compte ?</p>
                 <p class="footerblue">Se connecter</p>
             </div>

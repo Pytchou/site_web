@@ -10,7 +10,6 @@
           crossorigin=""/>
     <script src="https://kit.fontawesome.com/7be350b690.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
 
 <header id="bleu">
@@ -32,22 +31,22 @@
 </header>
 
 <main>
-    
+
     <!--Première section-->
-    <section class="row wrap">
-        <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12" id="divheader">
-            <div class="xLarge-7 large-7 medium-7 small-7 xSmall-7 padd-around" style="padding-top: 10px;">
-                <p class="bienvenue">Bonjour et bienvenue</p>
-                <img class="front" src="{{asset('media/images/front.svg')}}">
-                <img class="ombre" src="{{asset('media/images/ombre.svg')}}">
+    <section class="row wrap reveal padd-around">
+        <div class="xLarge-7 large-7 medium-12 small-12 xSmall-12 center" id="divheader">
+            <div class="padd-around" style="font-weight: 500; font-size: 32px; justify-content: center; text-align: center; line-height: 30px">
+                <p>Bonjour et bienvenue</p>
             </div>
-            <div class="xLarge-5 large-5 medium-5 small-5 xSmall-5 padd-around center column">
+        </div>
+        <div class="xLarge-5 large-5 medium-12 small-12 xSmall-12" style="display: flex; align-items: center;">
+            <div class="padd-around column" style="ustify-content: center; text-align: center;">
                 <h1 class="padd-around center"> Vous êtes sur notre site associatif </h1>
-                <p id="resume"> Ici, vous pourrez rechercher des associations et même vous y inscrire bénévolement, vous verrez tout les moyens de contact de ces associations, l'adresse et le nombre de places restantes.</p>
+                <p id="resume"> Ici, vous pourrez rechercher des associations et même vous y inscrire bénévolement, vous verrez tous les moyens de contact de ces associations, l'adresse et le nombre de places restantes.</p>
             </div>
         </div>
     </section>
-
+  
     <!--Deuxième section-->
     <section class="row wrap">
         <img id="image-map" src="{{asset('media/images/image-map.svg')}}">

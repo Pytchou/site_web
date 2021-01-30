@@ -38,7 +38,7 @@
                     <button type="submit" class="btn">S'inscrire</button>
                 </form>
             </div>
-            <div class="padd-around center">
+            <div class="padd-around center" style="justify-content: center; text-align: center;">
                 <p>Avez-vous déjà un compte ?</p>
                 <p class="footerblue">Se connecter</p>
             </div>

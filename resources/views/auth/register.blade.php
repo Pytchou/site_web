@@ -17,8 +17,10 @@
                     <p  class="reveal-2">un compte</p>
                 </div>
             </div>
-            <div class="padd-around">
-                <form id="enregister-form" method="post">
+            <div class="padd-around" id="enregister-form">
+                <form method="post" action="register_validator">
+                    @csrf
+                    <label>Je rejoins l'association :</label>
                     <div class="box">
                         <select>
                             <option>Croix Rouge</option>
@@ -27,14 +29,26 @@
                             <option>Secours populaire</option>
                         </select>
                     </div>
+                    {!! $errors->first('lastname', '<div class="alert alert-warning" role="alert">:message</div>')!!}
                     <label>Nom</label>
-                    <input type="text" name="nom" placeholder="Votre nom..." required spellcheck="false" autocomplete="off">
+                    <input type="text" name="lastname" placeholder="Votre nom..." >
+                    {!! $errors->first('name', '<div class="alert alert-warning" role="alert">:message</div>')!!}
                     <label>Prénom</label>
-                    <input type="text" name="prenom" placeholder="Votre prénom..." required spellcheck="false" autocomplete="off">
+                    <input type="text" name="name" placeholder="Votre prénom..." >
+                    {!! $errors->first('email', '<div class="alert alert-warning" role="alert">:message</div>')!!}
                     <label>Email</label>
-                    <input type="email" name="email" placeholder="Votre e-mail..." required spellcheck="false" autocomplete="off">
+                    <input type="email" name="email" placeholder="Votre e-mail..." >
+                    {!! $errors->first('password', '<div class="alert alert-warning" role="alert">:message</div>')!!}
                     <label>Mot de passe</label>
-                    <input type="password" name="password" placeholder="Votre mot de passe..." required spellcheck="false" autocomplete="off">
+                    <input type="password" name="password" placeholder="Votre mot de passe..." >
+                    {!! $errors->first('password', '<div class="alert alert-warning" role="alert">:message</div>')!!}
+                    <label>Confirmation de votre mot de passe</label>
+                    <input type="password" name="password_confirmation" placeholder="Votre mot de passe..." >
+                    {!! $errors->first('agree', '<div class="alert alert-warning" role="alert">:message</div>')!!}
+                    <label class="form-check-label" for="check">Accepter les termes et la politique de confidentialité.</label>
+                    <input type="checkbox" class="form-check-input"  name="agree" id="check" checked>
+
+
                     <button type="submit" class="btn">S'inscrire</button>
                 </form>
             </div>
@@ -48,6 +62,5 @@
     <img class="bleu-login2" src="{{asset('media/images/bleu-login.svg')}}">
 </main>
 
-<script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>

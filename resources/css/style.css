@@ -164,7 +164,7 @@ footer div {
 }
 
 #divheader {
-    background-image: url("{{asset('media/images/forme-intro.svg')}}");
+    /*background-image: url('media/images/forme-intro.svg');*/
     display: flex;
     position: relative;
     height: 50vh;

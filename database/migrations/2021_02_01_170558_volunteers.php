@@ -23,6 +23,7 @@ class Volunteers extends Migration
             $table->string('adress_details');
             $table->string('zip');
             $table->string('city');
+            $table->rememberToken();
             $table->timestamps();
         });
     }

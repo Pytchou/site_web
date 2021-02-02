@@ -11,17 +11,20 @@ use Illuminate\Support\Facades\Validator;
 
 class AuthController extends BaseController
 {
-    //
 
-    protected function register_validator(Request $request){
+    protected function register_volunteer_validator(Request $request){
 
         $validator = Validator::make($request->all(), [
+            'firstname' => ['required', 'string', 'max:255'],
             'lastname' => ['required', 'string', 'max:255'],
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:6', 'confirmed'],
+            'email' => ['required', 'string', 'email', 'max:150'],
+            'phone' => ['required', 'string', 'max:14'],
+            'address' => ['string', 'max:255'],
+            //'address_details' => ['string', 'max:255'],
+            'zip' => ['string', 'max:5'],
+            'city' => ['string', 'max:100'],
             'agree' => ['required']
-        ], array_merge(User::generate_error('lastname'), User::generate_error('name'), User::generate_error('email'), User::generate_error('password'), User::generate_error('agree')));
+        ], array_merge(User::generate_error('firstname'), User::generate_error('lastname'), User::generate_error('email'), User::generate_error('phone'), User::generate_error('address'), User::generate_error('address_details'), User::generate_error('zip'), User::generate_error('city')));
 
 
         if ($validator->fails()){
@@ -33,7 +36,7 @@ class AuthController extends BaseController
 
     }
 
-    protected function register_insert_data(Request $request){
+    protected function register_volunteer_insert_data(Request $request){
         return "ok";
     }
 

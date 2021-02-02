@@ -60,8 +60,18 @@ form input, form textarea {
 }
 
 form input:focus, form textarea:focus {
-    border-bottom: 2px solid #3C3C3C;
+    border-bottom: 2px solid #0F388E;
 }
+
+#agree {
+    margin: 15px 0;
+}
+
+#agree input {
+    width: 25px !important;
+    margin: 0px 20px;
+}
+
 
 /*=============================================================
                     La BOX SELECT

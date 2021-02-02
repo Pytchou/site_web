@@ -38,5 +38,5 @@ Route::get('/mentions-legales','App\Http\Controllers\Reglementation\Reglementati
 Route::get('/register', function (){
     return view('auth.register');
 });
-Route::post('/register_validator', 'App\Http\Controllers\Auth\AuthController@register_validator');
-Route::get('/register-insert-data', 'App\Http\Controllers\Auth\AuthController@register_insert_data')->name('register-insert-data');
+Route::post('/register_volunteer_validator', 'App\Http\Controllers\Auth\AuthController@register_volunteer_validator');
+Route::get('/register_volunteer_insert_data', 'App\Http\Controllers\Auth\AuthController@register_volunteer_insert_data')->name('register-insert-data');

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
-    <title>App Mobile</title>
+    <title>Enregistrement</title>
     <link href="css/app.css" rel="stylesheet">
 </head>
 <body>
@@ -18,11 +18,12 @@
                 </div>
             </div>
             <div class="padd-around" id="enregister-form">
-                <form method="post" action="register_volunteer_validator">
+                <form method="post" action="form1">
                     @csrf
                     <label>Je rejoins l'association :</label>
                     <div class="box">
-                        <select>
+                        <select name="partner">
+                            <option>--Sélectionner--</option>
                             <option>Croix Rouge</option>
                             <option>Banque alimentaire</option>
                             <option>Resto du coeur</option>
@@ -42,20 +43,9 @@
                     <label>Numéro de téléphone</label>
                     <input type="text" name="phone" placeholder="Votre numéro de téléphone.." >
                     {!! $errors->first('address', '<div class="alert alert-warning" role="alert">:message</div>')!!}
-                    <label>Adresse</label>
-                    <input type="text" name="address" placeholder="Votre adresse..." >
-                    {!! $errors->first('address_details', '<div class="alert alert-warning" role="alert">:message</div>')!!}
-                    <label>Compléments d'adresse</label>
-                    <input type="text" name="address_details" placeholder="Votre adresse..." >
-                    
-                    {!! $errors->first('agree', '<div class="alert alert-warning" role="alert">:message</div>')!!}
-                    <div class="row" id="agree">
-                        <input type="checkbox" class="form-check-input"  name="agree" id="check" checked>
-                        <label class="form-check-label" for="check">Accepter les termes et la politique de confidentialité.</label>
-                    </div>
-                    
 
-                    <button type="submit" class="btn">S'inscrire</button>
+
+                    <button type="submit" class="btn">Suivant</button>
                 </form>
             </div>
             <div class="padd-around center" style="justify-content: center; text-align: center;">

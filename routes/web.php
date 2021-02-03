@@ -38,5 +38,22 @@ Route::get('/mentions-legales','App\Http\Controllers\Reglementation\Reglementati
 Route::get('/register', function (){
     return view('auth.register');
 });
-Route::post('/register_volunteer_validator', 'App\Http\Controllers\Auth\AuthController@register_volunteer_validator');
-Route::get('/register_volunteer_insert_data', 'App\Http\Controllers\Auth\AuthController@register_volunteer_insert_data')->name('register-insert-data');
+/*Route::get('/form2', function (){
+    return view('auth.register2');
+});*/
+
+
+Route::post('/form1', 'App\Http\Controllers\Auth\AuthController@form1_volunteer_validator');
+Route::post('/form2', 'App\Http\Controllers\Auth\AuthController@form2_volunteer_validator');
+
+Route::get('/register_volunteer_insert_data', 'App\Http\Controllers\Auth\AuthController@register_volunteer_insert_data')->name('register_volunteer_insert_data');
+
+/*
+ * Clear Cache Route
+ */
+
+Route::get('/clean-all-cache', function (){
+    \Artisan::call('route:clear');
+    \Artisan::call('view:clear');
+    \Artisan::call('config:clear');
+});

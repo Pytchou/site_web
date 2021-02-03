@@ -63,6 +63,7 @@ class User extends Authenticatable
             $name.'.confirmed' => 'La confirmation ne correspond pas.',
             $name.'.date' => "Ce champ n'est pas une date valable.",
             $name.'.date_equals' => "Ce champ doit être une date égale à :date.",
+            $name.'.decimal' => "Ce champ doit être un nombre decimal",
             $name.'.date_format' => "Ce champ ne correspond pas au format :format.",
             $name.'.different' => 'Ce champ et :autre doit être différent.',
             $name.'.digits' => 'Ce champ doit être :digits chiffres.',

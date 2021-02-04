@@ -54,7 +54,7 @@
             </div>
         </div>
     </section>
-
+    <img class="bleu-login" src="{{asset('media/images/bleu-login.svg')}}">
     <img class="bleu-login2" src="{{asset('media/images/bleu-login.svg')}}">
 </main>
 

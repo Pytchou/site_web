@@ -60,7 +60,7 @@ class AuthController extends BaseController
 
 
         if ($validator->fails()){
-            return back()->withErrors($validator)->withInput();
+            dd($validator);
         }
 
 

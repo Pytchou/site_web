@@ -46,7 +46,7 @@
             </div>
         </div>
     </section>
-  
+
     <!--Deuxième section-->
     <section class="row wrap">
         <img id="image-map" src="{{asset('media/images/image-map.svg')}}">
@@ -64,7 +64,6 @@
             <div class="item js-marker" data-lat="44.7123637" data-lng="-1.0528869" data-title="Centre Lanton Resto du Coeur" data-place_restante="49" data-email="contact@restosducoeur.org" data-phone="Aucune Donnée" data-address="5 Place des Sports"></div>
             <div class="item js-marker" data-lat="44.914859771728516" data-lng="-0.4276067018508911" data-place_restante="155" data-title="Centre St Loubès Resto du Coeur" data-email="ad33.st-loubes@restosducoeur.org" data-phone="05 56 68 60 42" data-address="41 Rue du Stade"></div>
         </div>
-        <div class="map" id="map"></div>
         <div class="partnership_card" id="js-container">
             <div class="testa">
                 <p class="price-offers" id="title">Nom Association</p>
@@ -77,16 +76,20 @@
                     <p class="components">Tel : <span id="phone"></span></p>
                     <p class="components">Adresse : <span id="address"></span></p>
                 </div>
-            <div class="container-btns">
-                <div class="btns-offers">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <a href="/register" target="_blank"><p>Nous rejoindre</p></a>
+                <div class="container-btns">
+                    <div class="btns-offers">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="/register" target="_blank"><p>Nous rejoindre</p></a>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="map" id="map">
+
         </div>
+
     </section>
-    
+
     <!--Troisième section-->
     <section class="column wrap">
         <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12 column">

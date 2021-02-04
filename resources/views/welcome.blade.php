@@ -12,23 +12,23 @@
 </head>
 <body>
 
-<header id="bleu">
-    <section class="row wrap">
-        <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12">
-            <div class="padd-around center">
-                <nav>
-                    <ul>
-                        <li class="texthead white">
-                            <a href="/">Accueil</a>
-                            <a href="/register">Créer un compte</a>
-                            <a href="/mentions-legales">Information</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+<section id="burger-menu">
+    <div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger"><div></div></div>
+    <div class="menu">
+        <div>
+        <div>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#apropos">À Propos</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
         </div>
-    </section>
-</header>
+        </div>
+    </div>
+    </div>
+</section>
 
 <main>
 
@@ -46,7 +46,7 @@
             </div>
         </div>
     </section>
-  
+
     <!--Deuxième section-->
     <section class="row wrap">
         <img id="image-map" src="{{asset('media/images/image-map.svg')}}">
@@ -64,7 +64,6 @@
             <div class="item js-marker" data-lat="44.7123637" data-lng="-1.0528869" data-title="Centre Lanton Resto du Coeur" data-place_restante="49" data-email="contact@restosducoeur.org" data-phone="Aucune Donnée" data-address="5 Place des Sports"></div>
             <div class="item js-marker" data-lat="44.914859771728516" data-lng="-0.4276067018508911" data-place_restante="155" data-title="Centre St Loubès Resto du Coeur" data-email="ad33.st-loubes@restosducoeur.org" data-phone="05 56 68 60 42" data-address="41 Rue du Stade"></div>
         </div>
-        
         <div class="partnership_card" id="js-container">
             <div class="testa">
                 <p class="price-offers" id="title">Nom Association</p>
@@ -77,18 +76,20 @@
                     <p class="components">Tel : <span id="phone"></span></p>
                     <p class="components">Adresse : <span id="address"></span></p>
                 </div>
-            <div class="container-btns">
-                <div class="btns-offers">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <a href="/register" target="_blank"><p>Nous rejoindre</p></a>
+                <div class="container-btns">
+                    <div class="btns-offers">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="/register" target="_blank"><p>Nous rejoindre</p></a>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="map" id="map">
 
-        <div class="map" id="map"></div>
-
+        </div>
+        
     </section>
-    
+
     <!--Troisième section-->
     <section class="column wrap">
         <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12 column">

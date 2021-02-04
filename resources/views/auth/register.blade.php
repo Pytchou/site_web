@@ -54,7 +54,7 @@
             </div>
         </div>
     </section>
-
+    <p>bondour</p>
     <img class="bleu-login2" src="{{asset('media/images/bleu-login.svg')}}">
 </main>
 

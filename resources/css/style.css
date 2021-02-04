@@ -130,25 +130,23 @@ footer div {
 }
 
 #croix-rouge {
-    width: 69%;
+    width: 70%;
     min-width: 114px;
 }
 
 #banque-alimentaire {
-    width: 62%;
-    padding: 10px;
-    min-width: 128px;
+    width: 70%;
+    min-width: 114px;
 }
 
 #resto-du-coeur {
-    width: 68%;
-    padding-bottom: 4px;
-    min-width: 119px;
+    width: 70%;
+    min-width: 114px;
 }
 
 #secours-populaire {
     width: 70%;
-    min-width: 122px;
+    min-width: 114px;
 }
 
 .front {

@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
     <title>Enregistrement</title>
-    <link href="css/app.css" rel="stylesheet">
+    <link href="../css/app.css" rel="stylesheet">
 </head>
 <body>
 
 <main>
-    <section class="row wrap x-center" style="height: 100vh; display: flex; align-items: center;">
+    <section class="row wrap x-center">
         <div class="xLarge-4 large-4 medium-6 small-12 xSmall-12">
             <div class="padd-around column reveal">
                 <div class="texthead blue" style="line-height: 27px; margin-bottom: -10px;">
@@ -18,16 +18,36 @@
                 </div>
             </div>
             <div class="padd-around" id="enregister-form">
-                <form method="post" action="form2">
+                <form method="post" action="/register/form2">
                     @csrf
 
-                    <input type="hidden" name="partner" value="{{$partner}}">
-                    <input type="hidden" name="firstname" value="{{$firstname}}">
-                    <input type="hidden" name="lastname" value="{{$lastname}}">
-                    <input type="hidden" name="email" value="{{$email}}" >
-                    <input type="hidden" name="phone" value="{{$phone}}" >
+                    @if(isset($partner))
+                        <input type="hidden" name="partner" value="{{$partner}}">
+                    @else
+                        <input type="hidden" name="partner" value="N/A" >
+                    @endif
+                    @if(isset($firstname))
+                        <input type="hidden" name="firstname" value="{{$firstname}}">
+                    @else
+                        <input type="hidden" name="firstname" value="N/A" >
+                    @endif
+                    @if(isset($lastname))
+                        <input type="hidden" name="lastname" value="{{$lastname}}">
+                    @else
+                        <input type="hidden" name="lastname" value="N/A" >
+                    @endif
+                    @if(isset($email))
+                        <input type="hidden" name="email" value="{{$email}}" >
+                    @else
+                        <input type="hidden" name="email" value="N@A.fr" >
+                    @endif
+                    @if(isset($phone))
+                        <input type="hidden" name="phone" value="{{$phone}}" >
+                    @else
+                        <input type="hidden" name="phone" value="N/A" >
+                    @endif
 
-                   {!! $errors->first('adress', '<div class="alert alert-warning" role="alert">:message</div>')!!}
+                   {!! $errors->first('address', '<div class="alert alert-warning" role="alert">:message</div>')!!}
                     <label>Adresse</label>
                     <input type="text" name="address" placeholder="Votre prénom..." >
                     {!! $errors->first('address_detail', '<div class="alert alert-warning" role="alert">:message</div>')!!}

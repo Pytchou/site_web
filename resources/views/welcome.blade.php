@@ -64,6 +64,7 @@
             <div class="item js-marker" data-lat="44.7123637" data-lng="-1.0528869" data-title="Centre Lanton Resto du Coeur" data-place_restante="49" data-email="contact@restosducoeur.org" data-phone="Aucune Donnée" data-address="5 Place des Sports"></div>
             <div class="item js-marker" data-lat="44.914859771728516" data-lng="-0.4276067018508911" data-place_restante="155" data-title="Centre St Loubès Resto du Coeur" data-email="ad33.st-loubes@restosducoeur.org" data-phone="05 56 68 60 42" data-address="41 Rue du Stade"></div>
         </div>
+
         <div class="partnership_card" id="js-container">
             <div class="testa">
                 <p class="price-offers" id="title">Nom Association</p>
@@ -84,6 +85,7 @@
                 </div>
             </div>
         </div>
+
         <div class="map" id="map">
 
         </div>

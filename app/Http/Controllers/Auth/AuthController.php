@@ -8,6 +8,7 @@ use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Routing\Route;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
+use phpDocumentor\Reflection\Utils;
 
 
 class AuthController extends BaseController
@@ -60,7 +61,7 @@ class AuthController extends BaseController
 
 
         if ($validator->fails()){
-            dd($validator);
+            return redirect('register/form2')->withErrors($validator);
         }
 
 

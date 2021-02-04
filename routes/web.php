@@ -38,9 +38,9 @@ Route::get('/mentions-legales','App\Http\Controllers\Reglementation\Reglementati
 Route::get('/register', function (){
     return view('auth.register');
 });
-/*Route::get('/form2', function (){
+Route::get('/register/form2', function (){
     return view('auth.register2');
-});*/
+});
 
 
 Route::post('/form1', 'App\Http\Controllers\Auth\AuthController@form1_volunteer_validator');

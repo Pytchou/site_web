@@ -9,7 +9,7 @@
 <body>
 
 <main>
-    <section class="row wrap x-center">
+    <section class="row wrap x-center" style="height: 100vh; display: flex; align-items: center;">
         <div class="xLarge-4 large-4 medium-6 small-12 xSmall-12">
             <div class="padd-around column reveal">
                 <div class="texthead blue" style="line-height: 27px; margin-bottom: -10px;">

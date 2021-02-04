@@ -12,6 +12,7 @@
     .xLarge-10 {width: 83.33%;}
     .xLarge-11 {width: 91.66%;}
     .xLarge-12 {width: 100%;}
+
 }
 
 @media only screen and (min-width: 980px) and (max-width: 1279px) {
@@ -70,6 +71,7 @@
     #logo-container {
         flex-direction: column;
     }
+
 }
 
 @media only screen and (max-width: 259px) {
@@ -90,4 +92,5 @@
     #logo-container {
         flex-direction: column;
     }
+
 }

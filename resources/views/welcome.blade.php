@@ -12,23 +12,23 @@
 </head>
 <body>
 
-<header id="bleu">
-    <section class="row wrap">
-        <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12">
-            <div class="padd-around center">
-                <nav>
-                    <ul>
-                        <li class="texthead white">
-                            <a href="/">Accueil</a>
-                            <a href="/register">Créer un compte</a>
-                            <a href="/mentions-legales">Information</a>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+<section id="burger-menu">
+    <div class="menu-wrap">
+    <input type="checkbox" class="toggler">
+    <div class="hamburger"><div></div></div>
+    <div class="menu">
+        <div>
+        <div>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#apropos">À Propos</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+            </ul>
         </div>
-    </section>
-</header>
+        </div>
+    </div>
+    </div>
+</section>
 
 <main>
 
@@ -89,7 +89,7 @@
         <div class="map" id="map">
 
         </div>
-
+        
     </section>
 
     <!--Troisième section-->

@@ -10,7 +10,7 @@
           crossorigin=""/>
     <script src="https://kit.fontawesome.com/7be350b690.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body style="position: relative; z-index: -500;">
 
 <section id="burger-menu">
     <div class="menu-wrap">
@@ -30,7 +30,7 @@
     </div>
 </section>
 
-<main>
+<main style="position: relative; z-index: -500;">
 
     <!--Première section-->
     <section class="row wrap reveal padd-around">
@@ -48,7 +48,7 @@
     </section>
 
     <!--Deuxième section-->
-    <section class="row wrap">
+    <section class="row wrap" style="position: relative; z-index: -500;">
         <img id="image-map" src="{{asset('media/images/image-map.svg')}}">
         <div id="image-text" class="column">
             <h3>Map des partenaires</h3>

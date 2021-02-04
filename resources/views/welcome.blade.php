@@ -172,7 +172,7 @@
                         <a href="mailto:email@example.com">email@exemple.com</a>
                     </li>
                     <li class="center">
-                        <a href="tel:+33781815136">0781815136</a>
+                        <a href="tel:+33781815136">07 81 81 51 36</a>
                     </li>
                 </ul>
             </div>

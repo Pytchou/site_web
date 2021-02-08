@@ -1,0 +1,137 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a:hover {
+    color: #9e5f63;
+}
+
+/*=============================================================
+                            NAV BAR
+=============================================================*/
+nav {
+    width: 100%;
+    border-bottom: solid #D5E3D6 2px;
+}
+
+nav ul {
+    width: 80%;
+    margin: 20px;
+}
+
+nav, nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo-nav {
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-nav img {
+    width: 70px;
+}
+
+nav ul li {
+    padding: 10px;
+    margin: 0 22px;
+}
+
+nav ul li a {
+    font-size: 20px;
+}
+
+/*=============================================================
+                            ASIDE
+=============================================================*/
+aside {
+    width: 5%;
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 86px);
+    float: left;
+    border-right: solid #D5E3D6 2px;
+}
+
+aside i {
+    font-size: 4vh;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    padding: 20px;
+}
+
+/*=============================================================
+                            SECTION
+=============================================================*/
+#main h1 {
+    font-weight: 500;
+}
+
+.padding {
+    padding: 4px 0;
+}
+
+.logo-section {
+    width: 20px;
+}
+
+#recentproject p {
+    padding: 0 10px;
+}
+
+/*=============================================================
+                            BLOC
+=============================================================*/
+#bloc1, #bloc2, #bloc3 {
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+    text-align: center;
+}
+
+#bloc1 {
+    background-color: #CEE8CA;
+}
+
+#bloc2 {
+    background-color: #F2BC9E;
+}
+
+#bloc3 {
+    background-color: #92C7E8;
+}
+
+/*=============================================================
+                            BUTTON
+=============================================================*/
+
+.btn2 {
+    display: inline-block;
+    color: #9e5f63;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    background-image: linear-gradient(#fed6e3 0%, #ffaaaa 100%);
+    text-shadow: 1px 1px 1px rgb(255 255 255 / 66%);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 28%);
+}
+
+.btn2:active{
+    box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.32);
+    background-image: -webkit-linear-gradient(#fed6e3 0%, #ffcfcf 100%);
+    background-image: linear-gradient(#fed6e3 0%, #ffcfcf 100%);
+}
+
+.icon:hover {
+    color: #9e5f63;
+}

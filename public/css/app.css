@@ -1010,9 +1010,6 @@ footer div {
     margin-left: 20px;
 }
 
-nav {
-    margin-bottom: 40px;
-}
 
 .alert {
     color: red;
@@ -1022,20 +1019,20 @@ nav {
                             Burger Menu
     =============================================================*/
     /* CORE STYLES */
-    
+
     .container {
         max-width: 960px;
         margin: auto;
         overflow: hidden;
         padding: 0 3rem;
     }
-    
+
     .showcase {
         color: #000000;
         height: 100vh;
         position: relative;
     }
-    
+
     .showcase:before {
         content: '';
         position: absolute;
@@ -1045,7 +1042,7 @@ nav {
         height: 100%;
         z-index: -1;
     }
-    
+
     .showcase .showcase-inner {
         display: flex;
         flex-direction: column;
@@ -1054,7 +1051,7 @@ nav {
         text-align: center;
         height: 100%;
     }
-    
+
     .showcase p {
         font-size: 1.3rem;
     }
@@ -1065,7 +1062,7 @@ nav {
         left: 0;
         z-index: 1200;
     }
-    
+
     .menu-wrap .toggler {
         position: absolute;
         top: 22px;
@@ -1080,7 +1077,7 @@ nav {
         align-items: center;
         justify-content: center;
     }
-    
+
     .menu-wrap .hamburger {
         position: absolute;
         top: 0;
@@ -1096,7 +1093,7 @@ nav {
         align-items: center;
         justify-content: center;
     }
-    
+
     /* Hamburger Line */
     .menu-wrap .hamburger > div {
         position: relative;
@@ -1109,7 +1106,7 @@ nav {
         justify-content: center;
         transition: all 0.4s ease;
     }
-    
+
     /* Hamburger Lines - Top & Bottom */
     .menu-wrap .hamburger > div::before,
     .menu-wrap .hamburger > div::after {
@@ -1121,24 +1118,24 @@ nav {
         height: 3px;
         background: inherit;
     }
-    
+
     /* Moves Line Down */
     .menu-wrap .hamburger > div::after {
         top: 10px;
     }
-    
+
     /* Toggler Animation */
     .menu-wrap .toggler:checked + .hamburger > div {
         transform: rotate(135deg);
     }
-    
+
     /* Turns Lines Into X */
     .menu-wrap .toggler:checked + .hamburger > div:before,
     .menu-wrap .toggler:checked + .hamburger > div:after {
         top: 0;
         transform: rotate(90deg);
     }
-    
+
     /* Rotate On Hover When Checked */
     .menu-wrap .toggler:checked:hover + .hamburger > div {
         transform: rotate(225deg);
@@ -1147,17 +1144,17 @@ nav {
     .menu-wrap .toggler:checked ~ .menu {
         visibility: visible;
     }
-    
+
     .menu-wrap .toggler:checked ~ .menu > div {
         transform: scale(1);
         transition-duration: var(--menu-speed);
     }
-    
+
     .menu-wrap .toggler:checked ~ .menu > div > div {
         opacity: 1;
         transition:  opacity 0.4s ease 0.4s;
     }
-    
+
     .menu-wrap .menu {
         position: fixed;
         top: 0;
@@ -1170,7 +1167,7 @@ nav {
         align-items: center;
         justify-content: center;
     }
-    
+
     .menu-wrap .menu > div {
         background: rgb(169 169 169 / 90%);
         border-radius: 50%;
@@ -1183,7 +1180,7 @@ nav {
         transform: scale(0);
         transition: all 0.4s ease;
     }
-    
+
     .menu-wrap .menu > div > div {
         text-align: center;
         max-width: 90vw;
@@ -1191,13 +1188,13 @@ nav {
         opacity: 0;
         transition: opacity 0.4s ease;
     }
-    
+
     .menu-wrap .menu > div > div > ul > li {
         list-style: none;
         color: #000000;
         padding: 2rem;
     }
-    
+
     .menu-wrap .menu > div > div > ul > li > a {
         color: inherit;
         text-decoration: none;
@@ -1208,4 +1205,143 @@ nav {
     .Display-menu {
         visibility: hidden !important;
     }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header a:hover {
+    color: #9e5f63;
+}
+
+/*=============================================================
+                            NAV BAR
+=============================================================*/
+nav {
+    width: 100%;
+    border-bottom: solid #D5E3D6 2px;
+}
+
+nav ul {
+    width: 80%;
+    margin: 20px;
+}
+
+nav, nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo-nav {
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-nav img {
+    width: 70px;
+}
+
+nav ul li {
+    padding: 10px;
+    margin: 0 22px;
+}
+
+nav ul li a {
+    font-size: 20px;
+}
+
+/*=============================================================
+                            ASIDE
+=============================================================*/
+aside {
+    width: 5%;
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 86px);
+    float: left;
+    border-right: solid #D5E3D6 2px;
+}
+
+aside i {
+    font-size: 4vh;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    padding: 20px;
+}
+
+/*=============================================================
+                            SECTION
+=============================================================*/
+#main h1 {
+    font-weight: 500;
+}
+
+.padding {
+    padding: 4px 0;
+}
+
+.logo-section {
+    width: 20px;
+}
+
+#recentproject p {
+    padding: 0 10px;
+}
+
+/*=============================================================
+                            BLOC
+=============================================================*/
+#bloc1, #bloc2, #bloc3 {
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+    margin: 20px 0;
+    text-align: center;
+}
+
+#bloc1 {
+    background-color: #CEE8CA;
+}
+
+#bloc2 {
+    background-color: #F2BC9E;
+}
+
+#bloc3 {
+    background-color: #92C7E8;
+}
+
+/*=============================================================
+                            BUTTON
+=============================================================*/
+
+.btn2 {
+    display: inline-block;
+    color: #9e5f63;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 50%;
+    text-align: center;
+    font-weight: bold;
+    background-image: linear-gradient(#fed6e3 0%, #ffaaaa 100%);
+    text-shadow: 1px 1px 1px rgb(255 255 255 / 66%);
+    box-shadow: 0 1px 1px rgb(0 0 0 / 28%);
+}
+
+.btn2:active{
+    box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.32);
+    background-image: linear-gradient(#fed6e3 0%, #ffcfcf 100%);
+}
+
+.icon:hover {
+    color: #9e5f63;
+}
+
+
 

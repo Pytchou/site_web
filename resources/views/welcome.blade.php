@@ -8,21 +8,22 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
           crossorigin=""/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/7be350b690.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body style="position: relative; z-index: -500;">
 
 <section id="burger-menu">
     <div class="menu-wrap">
     <input type="checkbox" class="toggler">
     <div class="hamburger"><div></div></div>
-    <div class="menu">
+    <div class="menu" id="greyMenu">
         <div>
         <div>
             <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#apropos">À Propos</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#" id="home">Accueil</a></li>
+                <li><a href="/register" target="_blank">Créer un compte</a></li>
+                <li><a href="#foot" id="info">Informations</a></li>
             </ul>
         </div>
         </div>
@@ -30,25 +31,10 @@
     </div>
 </section>
 
-<main>
-
-    <!--Première section-->
-    <section class="row wrap reveal padd-around">
-        <div class="xLarge-7 large-7 medium-12 small-12 xSmall-12 center" id="divheader">
-            <div class="padd-around" style="font-weight: 500; font-size: 32px; justify-content: center; text-align: center; line-height: 30px">
-                <p>Bonjour et bienvenue</p>
-            </div>
-        </div>
-        <div class="xLarge-5 large-5 medium-12 small-12 xSmall-12" style="display: flex; align-items: center;">
-            <div class="padd-around column" style="ustify-content: center; text-align: center;">
-                <h1 class="padd-around center"> Vous êtes sur notre site associatif </h1>
-                <p id="resume"> Ici, vous pourrez rechercher des associations et même vous y inscrire bénévolement, vous verrez tous les moyens de contact de ces associations, l'adresse et le nombre de places restantes.</p>
-            </div>
-        </div>
-    </section>
+<main style="position: relative; z-index: -500;">
 
     <!--Deuxième section-->
-    <section class="row wrap">
+    <section class="row wrap" style="position: relative; z-index: -500; height: 100vh;">
         <img id="image-map" src="{{asset('media/images/image-map.svg')}}">
         <div id="image-text" class="column">
             <h3>Map des partenaires</h3>

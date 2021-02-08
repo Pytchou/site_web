@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
-    <title>Enregistrement</title>
-    <link href="css/app.css" rel="stylesheet">
+    <title>Inscription</title>
+    <link href="../css/app.css" rel="stylesheet">
 </head>
 <body>
 
@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="padd-around" id="enregister-form">
-                <form method="post" action="form1">
+                <form method="post" action="/register/form1">
                     @csrf
                     <label>Je rejoins l'association :</label>
                     <div class="box">

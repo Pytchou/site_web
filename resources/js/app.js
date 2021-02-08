@@ -1,3 +1,4 @@
-require('./map/app');
-require('./bootstrap');
-require('./register');
+import './map/app';
+import './bootstrap';
+import './register';
+import './header';

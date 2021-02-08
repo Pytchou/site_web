@@ -43,8 +43,8 @@ Route::get('/register/form2', function (){
 });
 
 
-Route::post('/form1', 'App\Http\Controllers\Auth\AuthController@form1_volunteer_validator');
-Route::post('/form2', 'App\Http\Controllers\Auth\AuthController@form2_volunteer_validator');
+Route::post('/register/form1', 'App\Http\Controllers\Auth\AuthController@form1_volunteer_validator');
+Route::post('/register/form2', 'App\Http\Controllers\Auth\AuthController@form2_volunteer_validator');
 
 Route::get('/register_volunteer_insert_data', 'App\Http\Controllers\Auth\AuthController@register_volunteer_insert_data')->name('register_volunteer_insert_data');
 

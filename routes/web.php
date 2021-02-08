@@ -48,6 +48,10 @@ Route::post('/form2', 'App\Http\Controllers\Auth\AuthController@form2_volunteer_
 
 Route::get('/register_volunteer_insert_data', 'App\Http\Controllers\Auth\AuthController@register_volunteer_insert_data')->name('register_volunteer_insert_data');
 
+Route::get('/dashboard', function (){
+    return view('auth.dashboard');
+});
+
 /*
  * Clear Cache Route
  */

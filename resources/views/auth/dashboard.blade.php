@@ -66,13 +66,13 @@
 
         <div id="bloc" class="xLarge-12 large-12 medium-12 small-12 xSmall-12 center">
             <div class="xLarge-3 large-3 medium-12 small-12 xSmall-12">
-                <h1>Ajouter un Evénement</h1>
-                <p>Create a new project on ProManage. Collaborate
-                    your work. Directory to your local projects</p>
+                <h1>Rejoindre une campagne</h1>
+                <p>De nombreuses campagnes d'aide alimentaire sont disponibles via nos partenaires.
+                Cliquez sur le bouton ci-dessous pour rejoindre l'une d'entre elle.</p>
                 <div style="align-items: center;display: flex;">
                     <a href="#" class="btn2">+</a>
-                    <p class="padd-around" style="text-transform: uppercase; color: #EC4E6E; font-weight: bold; font-size: 18px">
-                        Create New Project
+                    <p class="padd-around" style="text-transform: uppercase; color: #0F388E; font-weight: bold; font-size: 18px">
+                        Rejoindre une campagne
                     </p>
                 </div>
             </div>
@@ -177,7 +177,7 @@
                 </div>
             </div>
         </div>
-        
+
     </section>
 
 </main>

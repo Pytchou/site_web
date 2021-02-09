@@ -45,7 +45,7 @@ Route::get('/partenaire/register1', function (){
     return view('auth.partner.registerpart');
 });
 Route::get('/partenaire/register2', function (){
-    return view('auth.register2');
+    return view('auth.partner.registerpart2');
 });
 
 

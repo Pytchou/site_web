@@ -35,10 +35,16 @@ Route::get('/mentions-legales','App\Http\Controllers\Reglementation\Reglementati
  * Route Authentification
  */
 
-Route::get('/register', function (){
+Route::get('/benevole/register1', function (){
     return view('auth.register');
 });
-Route::get('/register/form2', function (){
+Route::get('/benevole/register2', function (){
+    return view('auth.register2');
+});
+Route::get('/partenaire/register1', function (){
+    return view('auth.register');
+});
+Route::get('/partenaire/register2', function (){
     return view('auth.register2');
 });
 

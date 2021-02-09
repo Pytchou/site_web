@@ -6,6 +6,7 @@
     <title>Dashboard</title>
     <link href="../css/app.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 <body>
 
@@ -63,37 +64,63 @@
     <!--Première section-->
     <section id="main" class="row wrap padd-around" style="width: auto">
 
-        <div class="xLarge-12 large-12 medium-12 small-12 xSmall-12 center">
+        <div id="bloc" class="xLarge-12 large-12 medium-12 small-12 xSmall-12 center">
             <div class="xLarge-3 large-3 medium-12 small-12 xSmall-12">
                 <h1>Ajouter un Evénement</h1>
                 <p>Create a new project on ProManage. Collaborate
                     your work. Directory to your local projects</p>
                 <div style="align-items: center;display: flex;">
                     <a href="#" class="btn2">+</a>
-                    <p class="padd-around" style="text-transform: uppercase; color: #EC4E6E; font-weight: bold">
+                    <p class="padd-around" style="text-transform: uppercase; color: #EC4E6E; font-weight: bold; font-size: 18px">
                         Create New Project
                     </p>
                 </div>
-
             </div>
             <div class="xLarge-3 large-3 medium-12 small-12 xSmall-12">
                 <div class="padd-around">
-                    <div class="padd-around column" id="bloc1" style="align-items: flex-end;">
-                        <p>dzeqsfdezqs</p>
+                    <div class="padd-around column" id="bloc1">
+                        <img class="logo-section" style="margin-bottom: 15vh;" src="{{asset('media/images/croix-rouge.png')}}" alt="">
+                        <p style="color: #4A7745">Team Members</p>
+                        <p style="color: #4A7745">Project Completion</p>
+                        <div class="skills">
+                            <div class="skill">
+                                <div class="skill-bar">
+                                    <div class="skill-per" per="67"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="xLarge-3 large-3 medium-12 small-12 xSmall-12">
                 <div class="padd-around">
-                    <div class="padd-around column" id="bloc2" style="align-items: flex-end;">
-                        <p>dzeqsfdezqs</p>
+                    <div class="padd-around column" id="bloc2">
+                        <img class="logo-section" style="margin-bottom: 15vh;" src="{{asset('media/images/croix-rouge.png')}}" alt="">
+                        <p style="color: #885A40">Team Members</p>
+                        <p style="color: #885A40">Project Completion</p>
+                        <div class="skills">
+                            <div class="skill">
+                                <div class="skill-bar">
+                                    <div class="skill-per" per="32"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="xLarge-3 large-3 medium-12 small-12 xSmall-12">
                 <div class="padd-around">
-                    <div class="padd-around column" id="bloc3" style="align-items: flex-end;">
-                        <p>dzeqsfdezqs</p>
+                    <div class="padd-around column" id="bloc3">
+                        <img class="logo-section" style="margin-bottom: 15vh;" src="{{asset('media/images/croix-rouge.png')}}" alt="">
+                        <p style="color: #3A7295">Team Members</p>
+                        <p style="color: #3A7295">Project Completion</p>
+                        <div class="skills">
+                            <div class="skill">
+                                <div class="skill-bar">
+                                    <div class="skill-per" per="54"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -155,5 +182,21 @@
 
 </main>
 
+<script>
+    $('.skill-per').each(function(){
+        var $this = $(this);
+        var per = $this.attr('per');
+        $this.css("width",per+'%');
+        $({animatedValue: 0}).animate({animatedValue: per},{
+            duration: 1000,
+            step: function(){
+                $this.attr('per', Math.floor(this.animatedValue) + '%');
+            },
+            complete: function(){
+                $this.attr('per', Math.floor(this.animatedValue) + '%');
+            }
+        });
+    });
+</script>
 </body>
 </html>

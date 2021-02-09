@@ -1206,6 +1206,9 @@ footer div {
         visibility: hidden !important;
     }
 
+/*=============================================================
+                            HEADER
+=============================================================*/
 header {
     display: flex;
     justify-content: space-between;
@@ -1221,7 +1224,7 @@ header a:hover {
 =============================================================*/
 nav {
     width: 100%;
-    border-bottom: solid #D5E3D6 2px;
+    border-bottom: solid #D5E3D6 3px;
 }
 
 nav ul {
@@ -1259,12 +1262,12 @@ nav ul li a {
                             ASIDE
 =============================================================*/
 aside {
-    width: 5%;
+    width: 6vh;
     display: flex;
     align-items: center;
     height: calc(100vh - 86px);
     float: left;
-    border-right: solid #D5E3D6 2px;
+    border-right: solid #D5E3D6 3px;
 }
 
 aside i {
@@ -1297,11 +1300,16 @@ aside i {
 /*=============================================================
                             BLOC
 =============================================================*/
+#bloc p {
+    margin: 10px 0;
+}
+
 #bloc1, #bloc2, #bloc3 {
     border-radius: 10px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
     margin: 20px 0;
-    text-align: center;
+    height: 28vh;
+    justify-content: flex-end;
 }
 
 #bloc1 {
@@ -1314,6 +1322,51 @@ aside i {
 
 #bloc3 {
     background-color: #92C7E8;
+}
+
+.skills {
+    width: 110%;
+    max-width: 100%;
+}
+
+.skill-bar {
+    height: 6px;
+    background: #cacaca;
+    border-radius: 8px;
+}
+
+.skill-per {
+    height: 6px;
+    background-color: #edc531;
+    border-radius: 8px;
+    width: 0;
+    transition: 1s linear;
+    position: relative;
+}
+
+.skill-per::before {
+    content: attr(per);
+    position: absolute;
+    padding: 4px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 4px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.skill-per::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background-color: #000;
+    top: -10px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
 }
 
 /*=============================================================

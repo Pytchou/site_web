@@ -26,7 +26,7 @@
                     <li>Créer un compte</li>
                     <i class="fas fa-chevron-down"></i>
                 </div>
-                <div class="choix_off" id="choixForm">
+                <div class="choix_off" style="margin-left: 10px;" id="choixForm">
                     <p><a href="/benevole/register">Bénévoles</a></p>
                     <p><a href="/partenaire/register">Partenaires</a></p>
                 </div>

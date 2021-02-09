@@ -1216,7 +1216,7 @@ header {
 }
 
 header a:hover {
-    color: #9e5f63;
+    color: black;
 }
 
 /*=============================================================
@@ -1375,25 +1375,26 @@ aside i {
 
 .btn2 {
     display: inline-block;
-    color: #9e5f63;
+    color: #0b2b6d;
     width: 45px;
     height: 45px;
     line-height: 45px;
     border-radius: 50%;
     text-align: center;
     font-weight: bold;
-    background-image: linear-gradient(#fed6e3 0%, #ffaaaa 100%);
+    background: rgb(68,113,208);
+    background: linear-gradient(180deg, rgba(68,113,208,1) 0%, rgba(15,56,142,1) 71%);
     text-shadow: 1px 1px 1px rgb(255 255 255 / 66%);
     box-shadow: 0 1px 1px rgb(0 0 0 / 28%);
 }
 
 .btn2:active{
     box-shadow: inset 0 0 5px rgba(128, 128, 128, 0.32);
-    background-image: linear-gradient(#fed6e3 0%, #ffcfcf 100%);
+    background-image: linear-gradient(#4471d0 0%, #4471d0 100%);
 }
 
 .icon:hover {
-    color: #9e5f63;
+    color: #0F388E;
 }
 
 

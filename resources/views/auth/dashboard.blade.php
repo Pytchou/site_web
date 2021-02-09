@@ -18,19 +18,19 @@
             </div>
             <ul>
                 <li>
-                    <a href="">Dashboard</a>
+                    <a href="">Tableau de bord</a>
                 </li>
                 <li>
-                    <a href="">All Projects</a>
+                    <a href="">Toutes les campagnes</a>
                 </li>
                 <li>
-                    <a href="">Members</a>
+                    <a href="">Membres</a>
                 </li>
                 <li>
-                    <a href="">Stats</a>
+                    <a href="">Statistiques</a>
                 </li>
                 <li>
-                    <a href="">Help</a>
+                    <a href="">Assistance</a>
                 </li>
             </ul>
         </nav>

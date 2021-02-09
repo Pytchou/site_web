@@ -80,8 +80,8 @@
                 <div class="padd-around">
                     <div class="padd-around column" id="bloc1">
                         <img class="logo-section" style="margin-bottom: 15vh;" src="{{asset('media/images/croix-rouge.png')}}" alt="">
-                        <p style="color: #4A7745">Team Members</p>
-                        <p style="color: #4A7745">Project Completion</p>
+                        <p style="color: #4A7745">Participants</p>
+                        <p style="color: #4A7745">Avancement de la campagne</p>
                         <div class="skills">
                             <div class="skill">
                                 <div class="skill-bar">
@@ -96,8 +96,8 @@
                 <div class="padd-around">
                     <div class="padd-around column" id="bloc2">
                         <img class="logo-section" style="margin-bottom: 15vh;" src="{{asset('media/images/croix-rouge.png')}}" alt="">
-                        <p style="color: #885A40">Team Members</p>
-                        <p style="color: #885A40">Project Completion</p>
+                        <p style="color: #885A40">Participants</p>
+                        <p style="color: #885A40">Avancement de la campagne</p>
                         <div class="skills">
                             <div class="skill">
                                 <div class="skill-bar">
@@ -112,8 +112,8 @@
                 <div class="padd-around">
                     <div class="padd-around column" id="bloc3">
                         <img class="logo-section" style="margin-bottom: 15vh;" src="{{asset('media/images/croix-rouge.png')}}" alt="">
-                        <p style="color: #3A7295">Team Members</p>
-                        <p style="color: #3A7295">Project Completion</p>
+                        <p style="color: #3A7295">Participants</p>
+                        <p style="color: #3A7295">Avancement de la campagne</p>
                         <div class="skills">
                             <div class="skill">
                                 <div class="skill-bar">
@@ -129,11 +129,11 @@
         <div id="recentproject" class="xLarge-12 large-12 medium-12 small-12 xSmall-12">
             <div class="padding">
                 <div style="align-items: center; display: flex">
-                    <p>Recent Projects</p>
-                    <p>Created</p>
-                    <p>Reporter</p>
-                    <p>Due</p>
-                    <p>Stats</p>
+                    <p>Campagnes recentes</p>
+                    <p>Date de creation</p>
+                    <p>Fondateur</p>
+                    <p>Dernière participation</p>
+                    <p>Etat</p>
                 </div>
             </div>
             <div class="padding">

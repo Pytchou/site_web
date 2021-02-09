@@ -58,6 +58,10 @@ Route::get('/dashboard', function (){
     return view('auth.dashboard');
 });
 
+Route::get('/dashboard_dark', function (){
+    return view('auth.dashboard_dark');
+});
+
 /*
  * Clear Cache Route
  */

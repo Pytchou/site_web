@@ -21,7 +21,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', 'App\Http\Controllers\WelcomeController@index');
 
 /*
  * Route de réglementation
@@ -32,7 +31,7 @@ Route::get('/rgpd','App\Http\Controllers\Reglementation\ReglementationController
 Route::get('/mentions-legales','App\Http\Controllers\Reglementation\ReglementationController@index_mentions_legales');
 
 /*
- * Route Authentification
+ * Route Authentification Benevole
  */
 
 Route::get('/benevole/register1', function (){
@@ -41,6 +40,19 @@ Route::get('/benevole/register1', function (){
 Route::get('/benevole/register2', function (){
     return view('auth.register2');
 });
+
+Route::get('/dashboard', function (){
+    return view('auth.dashboard');
+});
+
+Route::get('/dashboard_dark', function (){
+    return view('auth.dashboard_dark');
+});
+
+/*
+ * Route Authentification Partenaire
+ */
+
 Route::get('/partenaire/register1', function (){
     return view('auth.register');
 });
@@ -54,13 +66,8 @@ Route::post('/register/form2', 'App\Http\Controllers\Auth\AuthController@form2_v
 
 Route::get('/register_volunteer_insert_data', 'App\Http\Controllers\Auth\AuthController@register_volunteer_insert_data')->name('register_volunteer_insert_data');
 
-Route::get('/dashboard', function (){
-    return view('auth.dashboard');
-});
 
-Route::get('/dashboard_dark', function (){
-    return view('auth.dashboard_dark');
-});
+
 
 /*
  * Clear Cache Route

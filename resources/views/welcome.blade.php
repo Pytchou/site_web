@@ -21,12 +21,8 @@
         <div>
         <div>
             <ul>
-                <li><a href="#" id="home">Accueil</a></li>
-                <li><a href="/register" target="_blank">Créer un compte</a></li>
-                <div>
-                    <li><a href="/register">Bénévoles</a></li>
-                    <li><a href="/register"></a></li>
-                </div>
+                <li><a href="/" id="home">Accueil</a></li>
+                <li><a href="/benevole/register1" target="_blank">Créer un compte</a></li>
                 <li><a href="#foot" id="info">Informations</a></li>
             </ul>
         </div>
@@ -79,7 +75,7 @@
         <div class="map" id="map">
 
         </div>
-        
+
     </section>
 
     <!--Troisième section-->

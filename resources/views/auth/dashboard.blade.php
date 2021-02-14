@@ -68,7 +68,7 @@
             <div class="xLarge-3 large-3 medium-12 small-12 xSmall-12">
                 <h1>Rejoindre une campagne</h1>
                 <p>De nombreuses campagnes d'aide alimentaire sont disponibles via nos partenaires.
-                Cliquez sur le bouton ci-dessous pour rejoindre l'une d'entre elle.</p>
+                    Cliquez sur le bouton ci-dessous pour rejoindre l'une d'entre elle.</p>
                 <div style="align-items: center;display: flex;">
                     <a href="#" class="btn2">+</a>
                     <p class="padd-around" style="text-transform: uppercase; color: #0F388E; font-weight: bold; font-size: 18px">
@@ -200,5 +200,3 @@
 </script>
 </body>
 </html>
-
-

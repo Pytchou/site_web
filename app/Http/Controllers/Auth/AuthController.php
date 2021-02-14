@@ -16,10 +16,6 @@ use phpDocumentor\Reflection\Utils;
 class AuthController extends BaseController
 {
 
-    public function __construct(){
-        session_start();
-    }
-
     protected function form1_volunteer_validator(Request $request){
 
         $validator = Validator::make($request->all(), [

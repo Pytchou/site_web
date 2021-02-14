@@ -22,7 +22,12 @@
         <div>
             <ul>
                 <li><a href="/" id="home">Accueil</a></li>
-                <li><a href="/benevole/register1" target="_blank">Créer un compte</a></li>
+                @if(isset($_SESSION['session']))
+                    <li><a href="/benevole/dashboard" target="_blank">Tableau de Bord</a></li>
+                @else
+                    <li><a href="/benevole/login" target="_blank">Se Connecter</a></li>
+                    <li><a href="/benevole/register1" target="_blank">Créer un compte</a></li>
+                @endif
                 <li><a href="#foot" id="info">Informations</a></li>
             </ul>
         </div>

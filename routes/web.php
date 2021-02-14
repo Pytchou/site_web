@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+session_start();
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes

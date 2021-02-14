@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="padd-around" id="enregister-form">
-                <form method="post" action="/benevole/login">
+                <form method="post" action="/benevole/login_validator">
                     @csrf
 
                     @if(isset($error))

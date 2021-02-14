@@ -110,14 +110,25 @@ class AuthController extends BaseController
     }
 
     protected function volunteer_login(){
-
-
-
         if(isset($_SESSION['session'])){
             return Redirect::route('benevole_dashboard');
         }else{
             return view("auth.volunteer.login");
         }
+    }
+
+    protected function volunteer_login_validator(Request $request){
+
+        $validator = Validator::make($request->all(), [
+            'email' => ['required', 'email'],
+            'password' => ['required', 'string', 'min:6', 'max:255']
+        ], array_merge(User::generate_error('email'), User::generate_error('password')));
+
+        if ($validator->fails()){
+            return redirect('/benevole/login_check_sql')->withErrors($validator);
+        }
+
+        return Redirect::route("login_check_sql", $request);
     }
 
     /*

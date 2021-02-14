@@ -18,9 +18,10 @@ class Volunteers extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->string('email')->unique();
+            $table->string('password');
             $table->string('phone');
-            $table->string('adress');
-            $table->string('adress_details');
+            $table->string('address');
+            $table->string('address_details')->nullable();
             $table->string('zip');
             $table->string('city');
             $table->rememberToken();

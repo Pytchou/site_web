@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="padd-around" id="enregister-form">
-                <form method="post" action="/register/form2">
+                <form method="post" action="/benevole/register_form2">
                     @csrf
 
                     @if(isset($partner))
@@ -59,6 +59,9 @@
                     {!! $errors->first('city', '<div class="alert alert-warning" role="alert">:message</div>')!!}
                     <label>Ville</label>
                     <input type="text" name="city" placeholder="Votre numéro de téléphone.." >
+                    {!! $errors->first('password', '<div class="alert alert-warning" role="alert">:message</div>')!!}
+                    <label>Mot de passe</label>
+                    <input type="password" name="password" placeholder="Votre numéro de téléphone.." >
                     {!! $errors->first('agree', '<div class="alert alert-warning" role="alert">:message</div>')!!}
                     <div class="row" id="agree">
                         <input type="checkbox" class="form-check-input"  name="agree" id="check" checked>

@@ -35,15 +35,23 @@ Route::get('/mentions-legales','App\Http\Controllers\Reglementation\Reglementati
  */
 
 Route::get('/benevole/register1', function (){
-    return view('auth.register');
+    return view('auth.volunteer.register');
 });
+Route::post('/benevole/register_form1', 'App\Http\Controllers\Auth\AuthController@form1_volunteer_validator');
 Route::get('/benevole/register2', function (){
-    return view('auth.register2');
+    return view('auth.volunteer.register2');
 });
 
-Route::get('/dashboard', function (){
-    return view('auth.dashboard');
-});
+Route::post('/benevole/register_form2', 'App\Http\Controllers\Auth\AuthController@form2_volunteer_validator');
+Route::get('/benevole/register_volunteer_insert_data', 'App\Http\Controllers\Auth\AuthController@register_volunteer_insert_data')->name('register_volunteer_insert_data');
+
+Route::get("/benevole/login", 'App\Http\Controllers\Auth\AuthController@volunteer_login')->name('volunteer_login');
+Route::post('/benevole/login', 'App\Http\Controllers\Auth\AuthController@volunteer_login_check');
+
+
+Route::get('/benevole/dashboard', function (){
+    return view('auth.volunteer.dashboard');
+})->name('benevole_dashboard');
 
 Route::get('/dashboard_dark', function (){
     return view('auth.dashboard_dark');
@@ -59,13 +67,6 @@ Route::get('/partenaire/register1', function (){
 Route::get('/partenaire/register2', function (){
     return view('auth.register2');
 });
-
-
-Route::post('/register/form1', 'App\Http\Controllers\Auth\AuthController@form1_volunteer_validator');
-Route::post('/register/form2', 'App\Http\Controllers\Auth\AuthController@form2_volunteer_validator');
-
-Route::get('/register_volunteer_insert_data', 'App\Http\Controllers\Auth\AuthController@register_volunteer_insert_data')->name('register_volunteer_insert_data');
-
 
 
 

@@ -16,7 +16,7 @@ class Partners extends Migration
         Schema::create('partners', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->bigIncrements('volunteers_max_score');
+            $table->integer('volunteers_max_score');
             $table->string('siret')->nullable();
             $table->string('naf')->nullable();
             $table->string('phone');

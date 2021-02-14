@@ -14,8 +14,8 @@ class PartnersVolunteer extends Migration
     public function up()
     {
         Schema::create('partner_volunteer', function (Blueprint $table) {
-            $table->interger('partner_id');
-            $table->interger('volunteer_id');
+            $table->integer('partner_id');
+            $table->integer('volunteer_id');
         });
     }
 

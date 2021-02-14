@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="padd-around" id="enregister-form">
-                <form method="post" action="/register/form1">
+                <form method="post" action="/benevole/register_form1">
                     @csrf
                     <label>Je rejoins l'association :</label>
                     <div class="box">
@@ -42,7 +42,6 @@
                     {!! $errors->first('phone', '<div class="alert alert-warning" role="alert">:message</div>')!!}
                     <label>Numéro de téléphone</label>
                     <input type="text" name="phone" placeholder="Votre numéro de téléphone.." >
-                    {!! $errors->first('address', '<div class="alert alert-warning" role="alert">:message</div>')!!}
 
 
                     <button type="submit" class="btn">Suivant</button>

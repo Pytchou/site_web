@@ -16,7 +16,7 @@ class Exercice extends Migration
         Schema::create('exercice', function (Blueprint $table) {
             $table->id();
             $table->timestamp('date-start');
-            $table->timestamp('date-end');
+            $table->timestamp('date-end')->nullable();
             $table->string('title');
             $table->text('description')->nullable();
             $table->timestamps();

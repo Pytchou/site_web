@@ -20,7 +20,7 @@
             <div class="padd-around" id="enregister-form">
                 <form method="post" action="/register/form1">
                     @csrf
-                    <label>Quelle association :</label>
+                    <label>Je rejoins l'association :</label>
                     <div class="box">
                         <select name="partner">
                             <option>--Sélectionner--</option>
@@ -30,39 +30,19 @@
                             <option>Secours populaire</option>
                         </select>
                     </div>
-
+                    {!! $errors->first('firstname', '<div class="alert alert-warning" role="alert">:message</div>')!!}
+                    <label>Prénom</label>
+                    <input type="text" name="firstname" placeholder="Votre prénom..." >
+                    {!! $errors->first('lastname', '<div class="alert alert-warning" role="alert">:message</div>')!!}
                     <label>Nom</label>
-                    <input type="text" name="name_partner" placeholder="Le nom de votre association est..." >
-
-                    <label>Maximum de volontaire</label>
-                    <input type="text" name="max_partner" placeholder="Nombre maximum de volontaire..." >
-
-                    <label>Siret</label>
-                    <input type="email" name="num_siret" placeholder="Numéro de SIRET..." >
-
-                    <label>Naf</label>
-                    <input type="text" name="code_naf" placeholder="Code naf..." >
-
-                    <label>Numéro de téléphone</label>
-                    <input type="text" name="phone" placeholder="Votre numéro de téléphone..." >
-
+                    <input type="text" name="lastname" placeholder="Votre nom..." >
+                    {!! $errors->first('email', '<div class="alert alert-warning" role="alert">:message</div>')!!}
                     <label>Email</label>
-                    <input type="email" name="email" placeholder="Votre adresse mail..." >
-
-                    <label>Contact</label>
-                    <input type="text" name="conctat" placeholder="Le contact de l'asssociation..." >
-
-                    <label>adresse</label>
-                    <input type="text" name="adresse_partner" placeholder="Adresse de l'association..." >
-
-                    <label>Complément d'adresse</label>
-                    <input type="text" name="adresse_details" placeholder="Complément d'adresse..." >
-
-                    <label>Code postal</label>
-                    <input type="text" name="zip" placeholder="Votre code postal..." >
-
-                    <label>Ville</label>
-                    <input type="text" name="city" placeholder="Votre ville..." >
+                    <input type="email" name="email" placeholder="Votre e-mail..." >
+                    {!! $errors->first('phone', '<div class="alert alert-warning" role="alert">:message</div>')!!}
+                    <label>Numéro de téléphone</label>
+                    <input type="text" name="phone" placeholder="Votre numéro de téléphone.." >
+                    {!! $errors->first('address', '<div class="alert alert-warning" role="alert">:message</div>')!!}
 
 
                     <button type="submit" class="btn">Suivant</button>
@@ -75,6 +55,7 @@
         </div>
     </section>
     <img class="bleu-login" src="{{asset('media/images/bleu-login.svg')}}">
+    <p>bondour</p>
     <img class="bleu-login2" src="{{asset('media/images/bleu-login.svg')}}">
 </main>
 

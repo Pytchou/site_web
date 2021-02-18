@@ -205,7 +205,7 @@ class AuthController extends BaseController
 
     protected function register_partner_insert_data(Request $request){
 
-        dd(Mail::to('locascio.clement@gmail.com')->send(new Registered_Partner($request, str_replace('/', '', Hash::make('confirmation_token')))), str_replace('/', '', Hash::make('confirmation_token')));
+        Mail::to('locascio.clement@gmail.com')->send(new Registered_Partner($request, str_replace('/', '', Hash::make('confirmation_token'))));
         Partner::create([
             'name' => $request->name_partner,
             'volunteers_max_score' => $request->max_partner,

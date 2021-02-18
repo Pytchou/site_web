@@ -1,5 +1,6 @@
 @import 'fonts.css';
 @import 'map.css';
+@import "success_modal_register_partner.css";
 @import 'partnership_card.css';
 @import 'reboot.css';
 @import 'register.css';
@@ -7,3 +8,4 @@
 @import 'style.css';
 @import 'dashboard.css';
 @import 'dashboard_dark.css';
+

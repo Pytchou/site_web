@@ -21,7 +21,7 @@ session_start();
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 
 /*
@@ -52,11 +52,9 @@ Route::post('/benevole/login_validator', 'App\Http\Controllers\Auth\AuthControll
 Route::get('/benevole/login_check_sql', 'App\Http\Controllers\Auth\AuthController@volunteer_login_check')->name('login_check_sql');
 
 
-Route::get('/benevole/dashboard', function (){
-    return view('auth.volunteer.dashboard');
-})->name('benevole_dashboard');
+Route::get('/benevole/dashboard', 'App\Http\Controllers\Auth\AuthController@voluteer_dashboard')->name('benevole_dashboard');
 
-Route::get('/dashboard_dark', function (){
+Route::get('/benevole/dashboard_dark', function (){
     return view('auth.dashboard_dark');
 });
 
@@ -65,13 +63,17 @@ Route::get('/dashboard_dark', function (){
  */
 
 Route::get('/partenaire/register1', function (){
-    return view('auth.register');
+    return view('auth.partner.register');
 });
+Route::post('/partenaire/register_form1', 'App\Http\Controllers\Auth\AuthController@form1_partner_validator');
+
 Route::get('/partenaire/register2', function (){
-    return view('auth.register2');
+    return view('auth.partner.register2');
 });
+Route::post('/partenaire/register_form2', 'App\Http\Controllers\Auth\AuthController@form2_partner_validator');
 
-
+Route::get('/partenaire/register_partner_insert_data', 'App\Http\Controllers\Auth\AuthController@register_partner_insert_data')->name('register_partner_insert_data');
+Route::get('/partenaire/confirm/{name_partner}/{token}', 'App\Http\Controllers\Auth\AuthController@register_partner_confirm_data');
 
 /*
  * Clear Cache Route

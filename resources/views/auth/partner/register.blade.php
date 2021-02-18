@@ -15,56 +15,30 @@
                 <div class="texthead blue" style="line-height: 27px; margin-bottom: -10px;">
                     <p>Créer</p>
                     <p>un compte</p>
+                    <p>Partenaire</p>
                 </div>
             </div>
             <div class="padd-around" id="enregister-form">
-                <form method="post" action="/register/form1">
+                <form method="post" action="/partenaire/register_form1">
                     @csrf
-                    <label>Quelle association :</label>
-                    <div class="box">
-                        <select name="partner">
-                            <option>--Sélectionner--</option>
-                            <option>Croix Rouge</option>
-                            <option>Banque alimentaire</option>
-                            <option>Resto du coeur</option>
-                            <option>Secours populaire</option>
-                        </select>
-                    </div>
-
-                    <label>Nom</label>
+                    {!! $errors->first('name_partner', '<div class="alert alert-warning" role="alert">:message</div>')!!}
+                    <label>Nom Association</label>
                     <input type="text" name="name_partner" placeholder="Le nom de votre association est..." >
-
-                    <label>Maximum de volontaire</label>
-                    <input type="text" name="max_partner" placeholder="Nombre maximum de volontaire..." >
-
+                    {!! $errors->first('max_partner', '<div class="alert alert-warning" role="alert">:message</div>')!!}
+                    <label>Nombre maximum de volontaire</label>
+                    <input type="text" name="max_partner" placeholder="Nombre maximum de volontaire...">
+                    {!! $errors->first('siret', '<div class="alert alert-warning" role="alert">:message</div>')!!}
                     <label>Siret</label>
-                    <input type="email" name="num_siret" placeholder="Numéro de SIRET..." >
-
+                    <input type="text" name="siret" placeholder="Numéro de SIRET..." value="N/A">
+                    {!! $errors->first('naf', '<div class="alert alert-warning" role="alert">:message</div>')!!}
                     <label>Naf</label>
-                    <input type="text" name="code_naf" placeholder="Code naf..." >
-
+                    <input type="text" name="naf" placeholder="Code naf..." value="N/A" >
+                    {!! $errors->first('phone', '<div class="alert alert-warning" role="alert">:message</div>')!!}
                     <label>Numéro de téléphone</label>
                     <input type="text" name="phone" placeholder="Votre numéro de téléphone..." >
-
-                    <label>Email</label>
-                    <input type="email" name="email" placeholder="Votre adresse mail..." >
-
-                    <label>Contact</label>
-                    <input type="text" name="conctat" placeholder="Le contact de l'asssociation..." >
-
-                    <label>adresse</label>
-                    <input type="text" name="adresse_partner" placeholder="Adresse de l'association..." >
-
-                    <label>Complément d'adresse</label>
-                    <input type="text" name="adresse_details" placeholder="Complément d'adresse..." >
-
-                    <label>Code postal</label>
-                    <input type="text" name="zip" placeholder="Votre code postal..." >
-
-                    <label>Ville</label>
-                    <input type="text" name="city" placeholder="Votre ville..." >
-
-
+                    {!! $errors->first('contact', '<div class="alert alert-warning" role="alert">:message</div>')!!}
+                    <label>Nom & Prénom Président</label>
+                    <input type="text" name="contact" placeholder="Le nom et prénom du président de l'asssociation..." >
                     <button type="submit" class="btn">Suivant</button>
                 </form>
             </div>

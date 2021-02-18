@@ -19,11 +19,13 @@ class Partners extends Migration
             $table->integer('volunteers_max_score');
             $table->string('siret')->nullable();
             $table->string('naf')->nullable();
+            $table->string('confirmation_token')->nullable();
             $table->string('phone');
             $table->string('email')->unique();
+            $table->string('password');
             $table->string('contact');
             $table->string('address');
-            $table->string('address_details');
+            $table->string('address_details')->nullable();
             $table->string('zip');
             $table->string('city');
             $table->decimal('longitude')->nullable();

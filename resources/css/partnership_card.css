@@ -15,7 +15,27 @@
     position: absolute;
     z-index: 999;
     right: 50px;
-    top: 820px;
+    top: 10%;
+}
+
+@media only screen and (min-width: 10px) and (max-width: 979px) {
+
+    .partnership_card {
+        display: none;
+        width: 400px;
+        height: 375px;
+        flex-wrap: wrap;
+        margin: 15px;
+        background-color: #fff;
+        color: #222222;
+        box-shadow: 2px 2px 15px rgb(0 0 0 / 15%);
+        border-radius: 15px;
+        position: absolute;
+        z-index: 999;
+        left: -6%;
+        top: 10%;
+    }
+
 }
 
 .testa {
@@ -85,7 +105,7 @@
 
 .btns-offers a{
     padding: 15px;
-} 
+}
 
 .leaflet-left {
     left: 1840px !important;

@@ -1924,9 +1924,9 @@ if (info) {
 /*
  * Chargement de la carte
  */
-var map = new L.Map("map", {
-  center: new L.LatLng(44.837528228759766, -0.5740066766738892),
-  zoom: 10
+var map = new L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+  maxZoom: 20,
+  attribution: '&copy; OpenStreetMap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
 /*
  * Affiche le layer de la carte
@@ -1976,7 +1976,6 @@ document.addEventListener("click", function (event) {
     document.getElementById("js-container").classList.add("block");
   }
 });
-console.log(document.getElementById("part_title").innerText);
 
 /***/ }),
 

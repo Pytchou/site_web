@@ -12,7 +12,13 @@ let map = new L.Map("map", {
  * Affiche le layer de la carte
  */
 
-let layer = new L.StamenTileLayer("toner");
+let layer = new L.tileLayer("//stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg", {
+    attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> — Map data © <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+        subdomains: 'abcd',
+        maxZoom: 20,
+        minZoom: 0,
+        label: 'Toner Lite'  // Libellé pour le tooltip en option
+});
 map.addLayer(layer);
 
 /*

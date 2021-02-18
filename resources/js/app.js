@@ -1,5 +1,4 @@
 import './map/app';
-import './map/stamen';
 import './bootstrap';
 import './register';
 import './header';

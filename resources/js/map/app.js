@@ -17,7 +17,7 @@ let layer = new L.tileLayer("//stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}
         subdomains: 'abcd',
         maxZoom: 20,
         minZoom: 0,
-        label: 'Toner Lite'  // Libellé pour le tooltip en option
+        label: 'Terrain Lite'  // Libellé pour le tooltip en option
 });
 map.addLayer(layer);
 

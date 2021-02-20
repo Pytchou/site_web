@@ -45,7 +45,7 @@ Route::get('/benevole/register2', function (){
 });
 
 Route::post('/benevole/register_form2', 'App\Http\Controllers\Auth\AuthController@form2_volunteer_validator');
-Route::get('/benevole/register_volunteer_insert_data', 'App\Http\Controllers\Auth\AuthController@register_volunteer_insert_data')->name('register_volunteer_insert_data');
+Route::post('/benevole/register_volunteer_insert_data', 'App\Http\Controllers\Auth\AuthController@register_volunteer_insert_data')->name('register_volunteer_insert_data');
 
 Route::get("/benevole/login", 'App\Http\Controllers\Auth\AuthController@volunteer_login')->name('volunteer_login');
 Route::post('/benevole/login_validator', 'App\Http\Controllers\Auth\AuthController@volunteer_login_validator');

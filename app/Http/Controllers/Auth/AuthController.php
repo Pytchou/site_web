@@ -69,8 +69,19 @@ class AuthController extends BaseController
         }
 
 
-        //return Redirect::route("register_volunteer_insert_data", $request);
-        return \redirect()->route("register_volunteer_insert_data", $request);
+        return view('auth.volunteer.register_insert',[
+            'partner' => $request->partner,
+            'firstname' => $request->firstname,
+            'lastname' => $request->lastname,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'address_details' => $request->address_details,
+            'zip' => $request->zip,
+            'city' => $request->city,
+            'agree' => $request->agree
+        ]);
     }
 
 
@@ -87,7 +98,7 @@ class AuthController extends BaseController
             'address_details' => $request->address_details,
             'zip' => $request->zip,
             'city' => $request->city,
-            'agree' => $request->agree,
+            'agree' => $request->agree
         ]);
         return Redirect::route("volunteer_login");
     }

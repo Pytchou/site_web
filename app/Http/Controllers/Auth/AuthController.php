@@ -69,7 +69,8 @@ class AuthController extends BaseController
         }
 
 
-        return Redirect::route("register_volunteer_insert_data", $request);
+        //return Redirect::route("register_volunteer_insert_data", $request);
+        return \redirect()->route("register_volunteer_insert_data", $request);
     }
 
 

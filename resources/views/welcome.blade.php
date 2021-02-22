@@ -42,7 +42,7 @@
     <section class="row wrap" style="position: relative; z-index: -500; height: 100vh;">
         <img id="image-map" src="{{asset('media/images/image-map.svg')}}">
         <div id="image-text" class="column">
-            <h3>Map des partenaires</h3>
+            <h3>Carte des partenaires</h3>
             <h4>Cliquez sur un marqueur</h4>
             <h4>pour avoir plus d'infos</h4>
         </div>

@@ -140,7 +140,6 @@
                     document.getElementById('myBtn').click()
                 });
             }
-
         </script>
 
     @endif

@@ -21,27 +21,17 @@
         <div>
         <div>
             <ul>
-<<<<<<< HEAD
                 <li><a href="/" id="home">Accueil</a></li>
                 @if(isset($_SESSION['session']))
                     <li><a href="/benevole/dashboard" target="_blank">Tableau de Bord</a></li>
                 @else
                     <li><a href="/benevole/login" target="_blank">Se Connecter</a></li>
                     <li><a href="/benevole/register1" target="_blank">Créer un compte</a></li>
+                    <div class="choix_off" style="margin-left: 10px;" id="choixForm">
+                        <p><a href="/partenaire/register">Partenaires</a></p>
+                    </div>
                 @endif
                 <li><a href="#foot" id="info">Informations</a></li>
-=======
-                <li><a href="#" id="home">Accueil</a></li>
-                <div class="row center" style="margin-left: 10px; cursor: pointer;" id="createHeader">
-                    <li>Créer un compte</li>
-                    <i class="fas fa-chevron-down"></i>
-                </div>
-                <div class="choix_off" style="margin-left: 10px;" id="choixForm">
-                    <p><a href="/benevole/register">Bénévoles</a></p>
-                    <p><a href="/partenaire/register">Partenaires</a></p>
-                </div>
-                <li><a href="#footer" id="info">Informations</a></li>
->>>>>>> 255793a2fdb89f19491b56f63fb38d1f24d6c756
             </ul>
         </div>
         </div>

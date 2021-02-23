@@ -22,11 +22,9 @@ if (create) {
 
     create.onclick = function() {
         if (form.classList.contains('choix_on')) {
-            console.log('off');
             form.classList.remove('choix_on');
             form.classList.add('choix_off');
         } else {
-            console.log('on');
             form.classList.remove('choix_off');
             form.classList.add('choix_on');
         }

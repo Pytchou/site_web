@@ -218,7 +218,7 @@ class AuthController extends BaseController
     protected function register_partner_insert_data(Request $request){
 
         Mail::to('locascio.clement@gmail.com')->send(new Registered_Partner($request, str_replace('/', '', Hash::make('confirmation_token'))));
-        Partner::create([
+        /*Partner::create([
             'name' => $request->name_partner,
             'volunteers_max_score' => $request->max_partner,
             'siret' => $request->siret,
@@ -239,7 +239,7 @@ class AuthController extends BaseController
 
         return Redirect::route('welcome')->with('success', "Votre compte a bien été crée.
         Nous allons procéder à une vérification des informations que vous avez renseigné.
-        Vous receverez un email de confimation d'ici quelques jours.");
+        Vous receverez un email de confimation d'ici quelques jours.");*/
 
     }
 

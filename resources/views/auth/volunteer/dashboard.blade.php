@@ -39,30 +39,8 @@
 
 <main>
 
-    <aside>
-        <section class="row wrap">
-            <section class="column y-center">
-                <a href="" class="icon">
-                    <i class="fas fa-home"></i>
-                </a>
-                <a href="" class="icon">
-                    <i class="fas fa-calendar-times"></i>
-                </a>
-                <a href="" class="icon">
-                    <i class="fas fa-comment-dots"></i>
-                </a>
-                <a href="" class="icon">
-                    <i class="fas fa-question-circle"></i>
-                </a>
-                <a href="" class="icon">
-                    <i class="fas fa-cog"></i>
-                </a>
-            </section>
-        </section>
-    </aside>
-
     <!--Première section-->
-    <section id="main" class="row wrap padd-around" style="width: auto">
+    <section id="main" class="row wrap padd-around" style="width: 100%; height: 100vh;">
 
         <div id="bloc" class="xLarge-12 large-12 medium-12 small-12 xSmall-12 center">
             <div class="xLarge-3 large-3 medium-12 small-12 xSmall-12">

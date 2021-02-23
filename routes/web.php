@@ -55,7 +55,7 @@ Route::get('/benevole/login_check_sql', 'App\Http\Controllers\Auth\AuthControlle
 Route::get('/benevole/dashboard', 'App\Http\Controllers\Auth\AuthController@voluteer_dashboard')->name('benevole_dashboard');
 
 Route::get('/benevole/dashboard_dark', function (){
-    return view('auth.dashboard_dark');
+    return view('auth.volunteer.dashboard_dark');
 });
 
 /*

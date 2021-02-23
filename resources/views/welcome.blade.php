@@ -21,6 +21,7 @@
         <div>
         <div>
             <ul>
+<<<<<<< HEAD
                 <li><a href="/" id="home">Accueil</a></li>
                 @if(isset($_SESSION['session']))
                     <li><a href="/benevole/dashboard" target="_blank">Tableau de Bord</a></li>
@@ -29,6 +30,18 @@
                     <li><a href="/benevole/register1" target="_blank">Créer un compte</a></li>
                 @endif
                 <li><a href="#foot" id="info">Informations</a></li>
+=======
+                <li><a href="#" id="home">Accueil</a></li>
+                <div class="row center" style="margin-left: 10px; cursor: pointer;" id="createHeader">
+                    <li>Créer un compte</li>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="choix_off" style="margin-left: 10px;" id="choixForm">
+                    <p><a href="/benevole/register">Bénévoles</a></p>
+                    <p><a href="/partenaire/register">Partenaires</a></p>
+                </div>
+                <li><a href="#footer" id="info">Informations</a></li>
+>>>>>>> 255793a2fdb89f19491b56f63fb38d1f24d6c756
             </ul>
         </div>
         </div>
@@ -40,12 +53,15 @@
 
     <!--Deuxième section-->
     <section class="row wrap" style="position: relative; z-index: -500; height: 100vh;">
+<<<<<<< HEAD
         <img id="image-map" src="{{asset('media/images/image-map.svg')}}">
         <div id="image-text" class="column">
             <h3>Carte des partenaires</h3>
             <h4>Cliquez sur un marqueur</h4>
             <h4>pour avoir plus d'infos</h4>
         </div>
+=======
+>>>>>>> 255793a2fdb89f19491b56f63fb38d1f24d6c756
         <div class="list">
             <div class="item js-marker" data-lat="44.837528228759766" data-lng="-0.5740066766738892" data-place_restante="128" data-title="Centre Bordeaux Croix Rouge" data-email="Aucune donnée" data-phone="05 56 52 34 85" data-address="50 Rue Ferrere"></div>
             <div class="item js-marker" data-lat="44.8356819152832" data-lng="-0.5753112435340881" data-place_restante="185" data-title="Centre Bordeaux Banque Alimentaire" data-email="ba330@banquealimentaire.org" data-phone="05 56 43 10 63" data-address="15 rue Bougainville"></div>
@@ -157,7 +173,7 @@
 
 <!--Pied de page-->
 <footer>
-    <section class="row wrap" id="foot">
+    <section class="row wrap" id="footer">
         <div class="xLarge-4 large-4 medium-12 small-12 xSmall-12">
             <div class="padd-around">
                 <p>Informations</p>

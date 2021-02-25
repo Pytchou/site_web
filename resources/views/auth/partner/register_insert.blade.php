@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="padd-around" id="enregister-form">
-                <form id ="form" method="post" action="/benevole/register_volunteer_insert_data">
+                <form id ="form" method="post" action="/partenaire/register_partner_insert_data">
                     @csrf
 
                     @if(isset($name_partner))

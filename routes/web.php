@@ -72,7 +72,7 @@ Route::get('/partenaire/register2', function (){
 });
 Route::post('/partenaire/register_form2', 'App\Http\Controllers\Auth\AuthController@form2_partner_validator');
 
-Route::get('/partenaire/register_partner_insert_data', 'App\Http\Controllers\Auth\AuthController@register_partner_insert_data')->name('register_partner_insert_data');
+Route::post('/partenaire/register_partner_insert_data', 'App\Http\Controllers\Auth\AuthController@register_partner_insert_data')->name('register_partner_insert_data');
 Route::get('/partenaire/confirm/{name_partner}/{token}', 'App\Http\Controllers\Auth\AuthController@register_partner_confirm_data');
 
 /*

@@ -212,7 +212,21 @@ class AuthController extends BaseController
         }
 
 
-        return Redirect::route("register_partner_insert_data", $request);
+       return view('auth.partner.register_insert', [
+           'name_partner' => $request->name_partner,
+           'max_partner' => $request->max_partner,
+           'siret' => $request->siret,
+           'naf' => $request->naf,
+           'phone' => $request->phone,
+           'email' => $request->email,
+           'contact' => $request->contact,
+           'address' => $request->address,
+           'address_details' => $request->address_details,
+           'zip' => $request->zip,
+           'city' => $request->city,
+           'password' => Hash::make($request->password),
+           'agree' => $request->agree
+       ]);
     }
 
     protected function register_partner_insert_data(Request $request){

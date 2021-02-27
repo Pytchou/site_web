@@ -55,7 +55,9 @@ Route::get('/benevole/login_check_sql', 'App\Http\Controllers\Auth\AuthControlle
 Route::get('/benevole/dashboard', 'App\Http\Controllers\Auth\AuthController@voluteer_dashboard')->name('benevole_dashboard');
 
 Route::get('/benevole/dashboard_dark', function (){
-    return view('auth.volunteer.dashboard_dark');
+    return view('auth.volunteer.
+
+    dashboard_dark');
 });
 
 /*
@@ -72,8 +74,13 @@ Route::get('/partenaire/register2', function (){
 });
 Route::post('/partenaire/register_form2', 'App\Http\Controllers\Auth\AuthController@form2_partner_validator');
 
-Route::post('/partenaire/register_partner_insert_data', 'App\Http\Controllers\Auth\AuthController@register_partner_insert_data')->name('register_partner_insert_data');
+Route::get('/partenaire/confirm2', function(){
+    return view('auth.partner.confirm.confirm2');
+});
+
 Route::get('/partenaire/confirm/{name_partner}/{token}', 'App\Http\Controllers\Auth\AuthController@register_partner_confirm_data');
+Route::post('/partenaire/register_partner_confirm_form1', 'App\Http\Controllers\Auth\AuthController@register_partner_confirm_form1');
+Route::post('/partenaire/register_partner_confirm_notify', 'App\Http\Controllers\Auth\AuthController@register_partner_confirm_notify')->name('register_partner_confirm_notify');
 
 /*
  * Clear Cache Route

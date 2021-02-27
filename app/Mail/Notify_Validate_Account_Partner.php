@@ -6,8 +6,9 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Hash;
 
-class Registered_Partner extends Mailable
+class Notify_Validate_Account_Partner extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -16,11 +17,10 @@ class Registered_Partner extends Mailable
      *
      * @return void
      */
-    public function __construct($request, $confirmation_token)
+    public function __construct($data)
     {
         //
-        $this->request = $request;
-        $this->confirmation_token = $confirmation_token;
+        $this->request = $data;
     }
 
     /**
@@ -30,12 +30,11 @@ class Registered_Partner extends Mailable
      */
     public function build()
     {
-        return $this->markdown('emails.registered_partner')
+        return $this->markdown('emails.notify_validate_account_partner')
             ->from('contact@pytchou.fr')
-            ->subject("Inscription d'une association sur le site web")
+            ->subject("Validation de votre association sur le site web pytchou.locascio.fr")
             ->with([
-                'request' => $this->request,
-                'confirmation_token' => $this->confirmation_token
-            ]);;
+                'request' => $this->request
+            ]);
     }
 }

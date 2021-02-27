@@ -8,6 +8,6 @@
 Confirmer mon compte
 @endcomponent
 
-Cordialement,<br>
-L'équipe du site web
+<p>Cordialement.</p>
+{{ config('app.name') }}
 @endcomponent

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
     <title>Site web</title>
-    <link href="css/app.css" rel="stylesheet"></head>
+    <link href="{{ url('/css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
           integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
           crossorigin=""/>
@@ -111,7 +111,7 @@
         </div>
     </section>
 
-    @if(session(('success')))
+    @if(session('success'))
 
     <!-- Trigger/Open The Modal -->
         <button id="myBtn" style="display: none;"></button>
@@ -125,6 +125,38 @@
                 </div>
                 <div class="modal-body">
                     <p>{{ session('success') }}</p>
+                </div>
+            </div>
+
+        </div>
+
+        <script type="text/javascript">
+
+            if (document.readyState === 'complete') {
+                document.getElementById('myBtn').click()
+            } else {
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.getElementById('myBtn').click()
+                });
+            }
+        </script>
+
+    @endif
+
+    @if(session('error'))
+
+    <!-- Trigger/Open The Modal -->
+        <button id="myBtn" style="display: none;"></button>
+
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2 class="center">Information</h2>
+                </div>
+                <div class="modal-body">
+                    <p>{{ session('error') }}</p>
                 </div>
             </div>
 

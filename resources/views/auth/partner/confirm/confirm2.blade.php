@@ -13,14 +13,17 @@
         <div class="xLarge-4 large-4 medium-6 small-12 xSmall-12">
             <div class="padd-around column reveal">
                 <div class="texthead blue" style="line-height: 27px; margin-bottom: -10px;">
-                    <p>Créer</p>
+                    <p>Valider</p>
                     <p>un compte</p>
                 </div>
             </div>
             <div class="padd-around" id="enregister-form">
-                <form method="post" action="/partenaire/register_form2">
+                <form method="post" action="/partenaire/register_partner_confirm_notify">
                     @csrf
 
+                    @if(isset($id))
+                        <input type="hidden" name="id" value="{{$id}}">
+                    @endif
                     @if(isset($name_partner))
                         <input type="hidden" name="name_partner" value="{{$name_partner}}">
                     @else
@@ -54,35 +57,28 @@
 
                     {!! $errors->first('contact', '<div class="alert alert-warning" role="alert">:message</div>')!!}
                     <label>Nom & Prénom Président</label>
-                    <input type="text" name="contact" placeholder="Le nom et prénom du président de l'asssociation..." >
+                    <input type="text" name="contact" value="{{$contact}}" >
                     {!! $errors->first('address', '<div class="alert alert-warning" role="alert">:message</div>')!!}
                     <label>Adresse</label>
-                    <input type="text" name="address" placeholder="Adresse de l'association..." >
+                    <input type="text" name="address" value="{{$address}}" >
                     {!! $errors->first('address_details', '<div class="alert alert-warning" role="alert">:message</div>')!!}
                     <label>Complément d'adresse</label>
-                    <input type="text" name="addresse_details" placeholder="Complément d'adresse..." >
+                    @if(isset($address_details))
+                        <input type="text" name="address_details" value="{{$address_details}}">
+                    @else
+                        <input type="text" name="address_details" value="Rien">
+                    @endif
                     {!! $errors->first('zip', '<div class="alert alert-warning" role="alert">:message</div>')!!}
                     <label>Code postal</label>
-                    <input type="text" name="zip" placeholder="Votre code postal..." >
+                    <input type="text" name="zip" value="{{$zip}}" >
                     {!! $errors->first('city', '<div class="alert alert-warning" role="alert">:message</div>')!!}
                     <label>Ville</label>
-                    <input type="text" name="city" placeholder="Votre ville..." >
-                    {!! $errors->first('password', '<div class="alert alert-warning" role="alert">:message</div>')!!}
-                    <label>Mot de passe</label>
-                    <input type="password" name="password" placeholder="Votre mot de passe..." >
-                    {!! $errors->first('agree', '<div class="alert alert-warning" role="alert">:message</div>')!!}
-                    <div class="row" id="agree">
-                        <input type="checkbox" class="form-check-input"  name="agree" id="check" checked>
-                        <label class="form-check-label" for="check">Accepter les termes et la politique de confidentialité.</label>
-                    </div>
+                    <input type="text" name="city" value="{{$city}}" >
+                    {!! $errors->first('longitude', '<div class="alert alert-warning" role="alert">:message</div>')!!}
 
 
-                    <button type="submit" class="btn">S'inscrire</button>
+                    <button type="submit" class="btn">Valider les Informations</button>
                 </form>
-            </div>
-            <div class="padd-around center" style="justify-content: center; text-align: center;">
-                <p>Avez-vous déjà un compte ?</p>
-                <p class="footerblue">Se connecter</p>
             </div>
         </div>
     </section>

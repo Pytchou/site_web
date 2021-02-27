@@ -1,5 +1,5 @@
 @component('mail::message')
-# Validation de votre association ( {{$request->name_partner}} ) sur le site web pytchou.locascio.fr
+# Validation de votre association ( {{$request->name_partner}} ) sur le site web {{env('APP_URL')}}
 
 <p>Madame, Monsieur,</p>
 
@@ -9,7 +9,7 @@
 <p>En effet, à partir de maintenant vous pouvez vous connecter à l’aide de vos identifiants ou en cliquant que le
     bouton ci-dessous :</p>
 
-@component('mail::button', ['url' => '/partenaire/login'])
+@component('mail::button', ['url' => url('/partenaire/login')])
 Se connecter
 @endcomponent
 

@@ -32,7 +32,7 @@ class Notify_Validate_Account_Partner extends Mailable
     {
         return $this->markdown('emails.notify_validate_account_partner')
             ->from('contact@pytchou.fr')
-            ->subject("Validation de votre association sur le site web pytchou.locascio.fr")
+            ->subject("Validation de votre association sur le site web". env('APP_URL'))
             ->with([
                 'request' => $this->request
             ]);

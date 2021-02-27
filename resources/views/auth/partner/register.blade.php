@@ -25,7 +25,7 @@
                     <label>Nom Association</label>
                     <input type="text" name="name_partner" placeholder="Le nom de votre association est..." >
                     {!! $errors->first('max_partner', '<div class="alert alert-warning" role="alert">:message</div>')!!}
-                    <label>Nombre maximum de volontaire</label>
+                    <label>Nombre maximum de bénévole(s)</label>
                     <input type="text" name="max_partner" placeholder="Nombre maximum de volontaire...">
                     {!! $errors->first('siret', '<div class="alert alert-warning" role="alert">:message</div>')!!}
                     <label>Siret</label>

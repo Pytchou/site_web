@@ -14,6 +14,8 @@ jobs:
       with:
         php-version: '7.3'
     - uses: actions/checkout@v2
+    - name: Maintenance Mode Up
+      run: /usr/bin/php artisan down
     - name: Copy .env
       run: /usr/bin/php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Install Composer Dependencies
@@ -30,3 +32,5 @@ jobs:
       run: /usr/bin/npm run prod
     - name: Directory Permissions
       run: chmod -R 777 storage bootstrap/cache
+    - name: Maintenance Mode Down
+      run: /usr/bin/php artisan up

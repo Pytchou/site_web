@@ -18,14 +18,14 @@ jobs:
       run: /usr/local/bin/composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
     - name: Maintenance Mode Up
       run: /usr/bin/php artisan down
-    - name: Copy .env
-      run: /usr/bin/php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Install Node JS Dependencies
       run: /usr/bin/npm install
     - name: Update Composer Dependencies
       run: /usr/local/bin/composer update
     - name: Update Node JS Dependencies
       run: /usr/bin/npm update
+    - name: Copy .env
+      run: /usr/bin/php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Generate key
       run: /usr/bin/php artisan key:generate
     - name: Generate Minify files

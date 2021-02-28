@@ -21,7 +21,7 @@ jobs:
     - name: Install Node JS Dependencies
       run: /usr/bin/npm install
     - name: Update Composer Dependencies
-      run: /usr/local/bin/composer validate
+      run: /usr/local/bin/composer update
     - name: Update Node JS Dependencies
       run: /usr/bin/npm update
     - name: Copy .env

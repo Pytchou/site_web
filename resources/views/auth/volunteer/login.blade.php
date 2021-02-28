@@ -39,8 +39,8 @@
                 </form>
             </div>
             <div class="padd-around center" style="justify-content: center; text-align: center;">
-                <p>Avez-vous déjà un compte ?</p>
-                <p class="footerblue">Se connecter</p>
+                <p>Vous n'avez pas de compte ?</p>
+                <p class="footerblue"><a href="/benevole/register1" target="_blank">S'enregistrer</a></p>
             </div>
         </div>
     </section>

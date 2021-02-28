@@ -80,10 +80,6 @@
                     <button type="submit" class="btn">S'inscrire</button>
                 </form>
             </div>
-            <div class="padd-around center" style="justify-content: center; text-align: center;">
-                <p>Avez-vous déjà un compte ?</p>
-                <p class="footerblue">Se connecter</p>
-            </div>
         </div>
     </section>
     <img class="bleu-login" src="{{asset('media/images/bleu-login.svg')}}">

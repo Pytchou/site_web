@@ -49,7 +49,7 @@
             </div>
             <div class="padd-around center" style="justify-content: center; text-align: center;">
                 <p>Avez-vous déjà un compte ?</p>
-                <p class="footerblue">Se connecter</p>
+                <p class="footerblue"><a href="/benevole/login" target="_blank">Se connecter</a></p>
             </div>
         </div>
     </section>

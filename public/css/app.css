@@ -1081,11 +1081,12 @@ footer div {
 
 #image-text h3 {
     text-align: left;
-    color: rgb(0, 159, 255);
+    color: #0F388E;
     font-size: 35px;
     font-weight: 600;
     line-height: 42px;
     margin-bottom: 30px;
+    margin-left: 25px;
 }
 
 #image-text h4 {
@@ -1094,6 +1095,7 @@ footer div {
     font-weight: 100;
     line-height: 42px;
     margin-left: 20px;
+    color: #0F388E;
 }
 
 
@@ -1311,6 +1313,7 @@ footer div {
     font-size: 25px;
     padding: 0 20px;
 }
+
 /*=============================================================
                             HEADER
 =============================================================*/
@@ -1713,8 +1716,5 @@ aside i {
 }
 
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> 255793a2fdb89f19491b56f63fb38d1f24d6c756

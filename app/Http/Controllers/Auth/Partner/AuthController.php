@@ -151,6 +151,7 @@ class AuthController extends BaseController
                 'city' => $request->city,
                 'latitude' => $coor['lat'],
                 'longitude' => $coor['lng'],
+                'dashboard_view_name' => 'dashboard'
             ]);
 
             return Redirect::route('welcome')->with('success', "Votre compte a bien été crée.

@@ -67,10 +67,10 @@ Route::post('/partenaire/register_form1', [PartnerController::class, 'get_form1_
 Route::get('/partenaire/register2', [PartnerController::class, 'get_Partner_Form2']);
 Route::post('/partenaire/register_form2', [PartnerController::class, 'get_form2_partner_validator']);
 
-Route::get('/partenaire/confirm2', [PartnerController::class, 'get_Partner_Form2']);
 
 Route::get('/partenaire/confirm/{name_partner}/{token}', [PartnerController::class, 'set_register_partner_confirm_data']);
 Route::post('/partenaire/register_partner_confirm_form1', [PartnerController::class, 'get_register_partner_confirm_form1']);
+Route::get('/partenaire/confirm2', [PartnerController::class, 'get_Partner_confirm2']);
 Route::post('/partenaire/register_partner_confirm_notify', [PartnerController::class, 'get_register_partner_confirm_notify'])->name('register_partner_confirm_notify');
 
 /*

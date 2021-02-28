@@ -218,8 +218,20 @@ class AuthController extends BaseController
     }
 
     /**
+     * Génère la vue HTML contenant le premier formulaire pour l'inscription
+     *
+     * @return \Illuminate\Contracts\View\View  Retourne une vue
+     *
+     * @author Clément
+     */
+
+    public function get_Partner_confirm2(){
+        return view('auth.partner.confirm.confirm2');
+    }
+
+    /**
      * Valide si les donnes sont bien des string, avec une longeur max de X, ... ET met à jour les informations
-     * de l'association à jour en BDD ET notifie l'ulisateur de sa confimation de création de compte
+     * de l'association à jour en BDD ET notifie l'utilisateur de sa confimation de création de compte
      *
      * @param Request $request Récupère les donnéees envoyés par le formulaire
      *
@@ -276,10 +288,8 @@ class AuthController extends BaseController
         }
     }
 
-
-
     /**
-     * Récupère la view HTML pour le formulaire d'enregistrement
+     * Génère la view HTML de validation des données de l'utiilisateur par le modérateur
      *
      * @return \Illuminate\Contracts\View\View Retourne une vue
      *

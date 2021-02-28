@@ -17,7 +17,7 @@ jobs:
     - name: Copy .env
       run: /usr/bin/php -r "file_exists('.env') || copy('.env.example', '.env');"
     - name: Install Composer Dependencies
-      run: /usr/local/bin/composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+      run: /usr/local/bin/composer validate -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
     - name: Install Node JS Dependencies
       run: /usr/bin/npm update
     - name: Generate key

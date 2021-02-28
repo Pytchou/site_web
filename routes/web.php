@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\Volunteer\AuthController as BenevoleController;
+use App\Http\Controllers\Auth\Partner\AuthController as PartnerController;
+use App\Http\Controllers\Reglementation\ReglementationController as ReglementationController;
 
 session_start();
 
@@ -28,7 +31,7 @@ Route::get('/', function () {
  * Route de réglementation
  */
 
-Route::get('/cgu','App\Http\Controllers\Reglementation\ReglementationController@index_cgu');
+Route::get('/cgu',[ReglementationController::class, 'index_cgu']);
 Route::get('/rgpd','App\Http\Controllers\Reglementation\ReglementationController@index_rgpd');
 Route::get('/mentions-legales','App\Http\Controllers\Reglementation\ReglementationController@index_mentions_legales');
 
@@ -36,51 +39,40 @@ Route::get('/mentions-legales','App\Http\Controllers\Reglementation\Reglementati
  * Route Authentification Benevole
  */
 
-Route::get('/benevole/register1', function (){
-    return view('auth.volunteer.register');
-});
-Route::post('/benevole/register_form1', 'App\Http\Controllers\Auth\AuthController@form1_volunteer_validator');
-Route::get('/benevole/register2', function (){
-    return view('auth.volunteer.register2');
-});
+Route::get('/benevole/register1',[BenevoleController::class, 'get_Register_Form1']);
+Route::post('/benevole/register_form1', [BenevoleController::class, 'get_form1_volunteer_validator']);
+Route::get('/benevole/register2', [BenevoleController::class, 'get_Register_Form2']);
 
-Route::post('/benevole/register_form2', 'App\Http\Controllers\Auth\AuthController@form2_volunteer_validator');
-Route::post('/benevole/register_volunteer_insert_data', 'App\Http\Controllers\Auth\AuthController@register_volunteer_insert_data')->name('register_volunteer_insert_data');
+Route::post('/benevole/register_form2', [BenevoleController::class, 'get_form2_volunteer_validator']);
 
-Route::get("/benevole/login", 'App\Http\Controllers\Auth\AuthController@volunteer_login')->name('volunteer_login');
-Route::post('/benevole/login_validator', 'App\Http\Controllers\Auth\AuthController@volunteer_login_validator');
-Route::get('/benevole/login_check_sql', 'App\Http\Controllers\Auth\AuthController@volunteer_login_check')->name('login_check_sql');
+Route::get("/benevole/login", [BenevoleController::class, 'get_volunteer_login'])->name('get_volunteer_login');
+Route::post('/benevole/login_validator', [BenevoleController::class, 'volunteer_login_validator']);
+
+Route::get('/benevole/dashboard', [BenevoleController::class, 'voluteer_dashboard']);
 
 
-Route::get('/benevole/dashboard', 'App\Http\Controllers\Auth\AuthController@voluteer_dashboard')->name('benevole_dashboard');
-
-Route::get('/benevole/dashboard_dark', function (){
-    return view('auth.volunteer.
-
-    dashboard_dark');
-});
 
 /*
  * Route Authentification Partenaire
  */
 
 Route::get('/partenaire/register1', function (){
-    return view('auth.partner.register');
+    return view('auth.partner.register.register');
 });
-Route::post('/partenaire/register_form1', 'App\Http\Controllers\Auth\AuthController@form1_partner_validator');
+Route::post('/partenaire/register_form1', [PartnerController::class, 'form1_partner_validator']);
 
 Route::get('/partenaire/register2', function (){
-    return view('auth.partner.register2');
+    return view('auth.partner.register.register2');
 });
-Route::post('/partenaire/register_form2', 'App\Http\Controllers\Auth\AuthController@form2_partner_validator');
+Route::post('/partenaire/register_form2', [PartnerController::class, 'form2_partner_validator']);
 
 Route::get('/partenaire/confirm2', function(){
     return view('auth.partner.confirm.confirm2');
 });
 
-Route::get('/partenaire/confirm/{name_partner}/{token}', 'App\Http\Controllers\Auth\AuthController@register_partner_confirm_data');
-Route::post('/partenaire/register_partner_confirm_form1', 'App\Http\Controllers\Auth\AuthController@register_partner_confirm_form1');
-Route::post('/partenaire/register_partner_confirm_notify', 'App\Http\Controllers\Auth\AuthController@register_partner_confirm_notify')->name('register_partner_confirm_notify');
+Route::get('/partenaire/confirm/{name_partner}/{token}', [PartnerController::class, 'register_partner_confirm_data']);
+Route::post('/partenaire/register_partner_confirm_form1', [PartnerController::class, 'register_partner_confirm_form1']);
+Route::post('/partenaire/register_partner_confirm_notify', [PartnerController::class, 'register_partner_confirm_notify'])->name('register_partner_confirm_notify');
 
 /*
  * Clear Cache Route

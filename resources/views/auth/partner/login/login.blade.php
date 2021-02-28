@@ -40,7 +40,7 @@
             </div>
             <div class="padd-around center" style="justify-content: center; text-align: center;">
                 <p>Vous n'avez pas de compte ?</p>
-                <p class="footerblue"><a href="/benevole/register1" target="_blank">S'enregistrer</a></p>
+                <p class="footerblue"><a href="/partenaire/register1" >Enregistrer mon association</a></p>
             </div>
         </div>
     </section>

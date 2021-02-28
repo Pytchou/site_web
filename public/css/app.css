@@ -932,7 +932,8 @@ footer .padd-around p {
 }
 
 footer div {
-    color: #0F388E;
+    color: white;
+    background-color: #0F388E;
 }
 
 .colab {

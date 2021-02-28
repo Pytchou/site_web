@@ -21,7 +21,7 @@ jobs:
     - name: Install Node JS Dependencies
       run: /usr/bin/npm install
     - name: Update Composer Dependencies
-      run: /usr/local/bin/composer update
+      run: /usr/local/bin/composer validate
     - name: Update Node JS Dependencies
       run: /usr/bin/npm update
     - name: Copy .env
@@ -30,7 +30,5 @@ jobs:
       run: /usr/bin/php artisan key:generate
     - name: Generate Minify files
       run: /usr/bin/npm run prod
-    - name: Directory Permissions
-      run: chmod -R 777 storage bootstrap/cache
     - name: Maintenance Mode Down
       run: /usr/bin/php artisan up

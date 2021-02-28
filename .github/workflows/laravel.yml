@@ -30,7 +30,5 @@ jobs:
       run: /usr/bin/php artisan key:generate
     - name: Generate Minify files
       run: /usr/bin/npm run prod
-    - name: Directory Permissions
-      run: chmod -R 777 storage bootstrap/cache
     - name: Maintenance Mode Down
       run: /usr/bin/php artisan up

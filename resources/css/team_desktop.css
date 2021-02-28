@@ -1,0 +1,13 @@
+section{
+    background-color: #35415E;
+}
+body>:nth-child(2){
+    height: 100vh;
+}
+
+body>:nth-child(2)>:nth-child(1),body>:nth-child(2)>:nth-child(2),body>:nth-child(2)>:nth-child(3){
+    margin-top: 0;
+}
+body>:nth-child(2)>div{
+    margin-top: -120px;
+}

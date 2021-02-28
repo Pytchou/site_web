@@ -22,10 +22,8 @@
                 <div>
                     <ul>
                         <li><a href="#" id="home">Accueil</a></li>
-                        <li><a href="/benevole/register1" target="_blank">Créer un compte Bénévole</a></li>
-                        <li><a href="/benevole/login">Se Connecter avec un compte Bénévole</a></li>
-                        <li><a href="/partenaire/register1" target="_blank">Créer un compte Association</a></li>
-                        <li><a href="/partenaire/login">Se Connecter avec un compte Association</a></li>
+                        <li><a href="/benevole/login" target="_blank">Espace Bénévole</a></li>
+                        <li><a href="/partenaire/login" target="_blank">Espace Association</a></li>
                         <li><a href="#foot" id="info">Informations</a></li>
                     </ul>
                 </div>

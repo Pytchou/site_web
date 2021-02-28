@@ -61,7 +61,7 @@ Route::get('/partenaire/register1', function (){
 });
 
 Route::get('/membres', function (){
-    return view('auth.team_desktop');
+    return view('auth.partner.team_desktop');
 });
 
 Route::post('/partenaire/register_form1', [PartnerController::class, 'form1_partner_validator']);

@@ -12,7 +12,7 @@
 <script src="https://kit.fontawesome.com/7be350b690.js" crossorigin="anonymous"></script>
 </head>
 <body style="position: relative; z-index: -500;">
-
+<!--Première section-->
 <section id="burger-menu">
     <div class="menu-wrap">
         <input type="checkbox" class="toggler">
@@ -38,7 +38,7 @@
     <section class="row wrap" style="position: relative; z-index: -500; height: 100vh;">
         <img id="image-map" src="{{asset('media/images/image-map.svg')}}">
         <div id="image-text" class="column">
-            <h3>Map des partenaires</h3>
+            <h3>Carte des Associations</h3>
             <h4>Cliquez sur un marqueur</h4>
             <h4>pour avoir plus d'infos</h4>
         </div>

@@ -16,7 +16,7 @@ class ErrorController extends Controller
      * @param $name Champs à tester
      * @return array Exemple: ['integer', 'Ce champ doit être un nombre entier.']
      */
-    static public function generate_error($name){
+    static function generate_error($name){
         return [
             $name.'.accepted' => 'Ce champ doit être acceptée.',
             $name.'.active_url' => "Ce champ n'est pas une URL valide.",

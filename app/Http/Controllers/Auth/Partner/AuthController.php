@@ -28,12 +28,13 @@ class AuthController extends BaseController
     /**
      * Génère la vue HTML contenant le premier formulaire pour l'inscription
      *
-     * @param Request $request
+     * @param Request $request Récupère les donnéees envoyés par le formulaire
      *
      * @return \Illuminate\Contracts\View\View Retourne une vue
      *
      * @author Clément
      */
+
     public function form1_partner_validator(Request $request){
     $validator = Validator::make($request->all(), [
         'name_partner' => ['required', 'string'],
@@ -61,8 +62,13 @@ class AuthController extends BaseController
 }
 
     /**
-     * @param Request $request
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     * Valide si les donnes sont bien des string, avec une longeur max de X, ... ET Envoie un email de creation
+     * de compte au modérateur ET Ajoute l'utilisateur en BDD
+     *
+     * @param Request $request Récupère les donnéees envoyés par le formulaire
+     *
+     * @return \Illuminate\Routing\Redirector Retourne une redirection vers un URI
+     *
      * @author Clément
      */
     public function form2_partner_validator(Request $request){
@@ -128,9 +134,13 @@ class AuthController extends BaseController
 
 
     /**
-     * @param $name_partner
-     * @param $token
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\RedirectResponse
+     * Permet à un modérateur d'accèder au information d'un utilisateur
+     *
+     * @param $name_partner Nom de l'utilisateur stocké en BDD
+     * @param $token Confirmation_Token de l'utilisateur stocké en BDD
+     *
+     * @return \Illuminate\Contracts\View\View Retourne une vue
+     *
      * @author Clément
      */
     public function register_partner_confirm_data($name_partner, $token){
@@ -146,8 +156,10 @@ class AuthController extends BaseController
     }
 
     /**
-     * @param Request $request
-     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\RedirectResponse
+     * Valide  si les donnes sont bien des string, avec une longeur max de X, ...
+     * @param Request $request Récupère les donnéees envoyés par le formulaire
+     * @return \Illuminate\Contracts\View\View Retourne une vue
+     * @return \Illuminate\Http\RedirectResponse Ou Retourne une redirection vers un URI
      * @author Clément
      */
     public function register_partner_confirm_form1(Request $request){
@@ -177,8 +189,13 @@ class AuthController extends BaseController
     }
 
     /**
-     * @param Request $request
-     * @return \Illuminate\Http\RedirectResponse
+     * Valide si les donnes sont bien des string, avec une longeur max de X, ... ET met à jour les informations
+     * de l'association à jour en BDD ET notifie l'ulisateur de sa confimation de création de compte
+     *
+     * @param Request $request Récupère les donnéees envoyés par le formulaire
+     *
+     * @return \Illuminate\Http\RedirectResponse Retourne une redirection vers un URI
+     *
      * @author Clément
      */
     public function register_partner_confirm_notify(Request $request){

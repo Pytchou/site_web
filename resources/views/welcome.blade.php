@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
     <title>Site web</title>
     <link href="{{ url('css/app.css') }}" rel="stylesheet"></head>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-      crossorigin=""/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://kit.fontawesome.com/7be350b690.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/7be350b690.js" crossorigin="anonymous"></script>
 </head>
 <body style="position: relative; z-index: -500;">
 <!--Première section-->

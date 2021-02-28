@@ -157,7 +157,7 @@ class AuthController extends BaseController
     }
 
     /**
-     *  Validate si les donnes sont bien des string, avec une longeur max de X, ... ET connecte l'utilisateur
+     *  Valide si les donnes sont bien des string, avec une longeur max de X, ... ET connecte l'utilisateur
      *
      * @param Request $request Récupère les donnéees envoyés par le formulaire
      *

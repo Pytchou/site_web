@@ -57,8 +57,9 @@ class AuthController extends BaseController
             'naf' => ['string'],
             'phone' => ['required', 'string', 'max:14'],
             'email' => ['required', 'email']
-        ], array_merge(ErrorController::generate_errorr('name_partner'), ErrorController::generate_errorr('max_partner'), ErrorController::generate_errorr('siret'), ErrorController::generate_errorr('naf'),
-            ErrorController::generate_errorr('phone'), ErrorController::generate_errorr('email')));
+        ], array_merge(ErrorController::generate_error('name_partner'), ErrorController::generate_error('max_partner'), ErrorController::generate_error('siret'), ErrorController::generate_error('naf'),
+            ErrorController::generate_error('phone'), ErrorController::generate_error('email')));
+
 
         if ($validator->fails()){
             return back()->withErrors($validator)->withInput();
@@ -113,10 +114,10 @@ class AuthController extends BaseController
             'city' => ['required', 'string'],
             'password' => ['required', 'string', 'min:8'],
             'agree' => ['required']
-        ], array_merge(ErrorController::generate_errorr('name_partner'), ErrorController::generate_errorr('max_partner'), ErrorController::generate_errorr('siret'),
-            ErrorController::generate_errorr('naf'), ErrorController::generate_errorr('phone'), ErrorController::generate_errorr('email'),
-            ErrorController::generate_errorr('contact'), ErrorController::generate_errorr('address'), ErrorController::generate_errorr('address_details'),
-            ErrorController::generate_errorr('city'), ErrorController::generate_errorr('agree')));
+        ], array_merge(ErrorController::generate_error('name_partner'), ErrorController::generate_error('max_partner'), ErrorController::generate_error('siret'),
+            ErrorController::generate_error('naf'), ErrorController::generate_error('phone'), ErrorController::generate_error('email'),
+            ErrorController::generate_error('contact'), ErrorController::generate_error('address'), ErrorController::generate_error('address_details'),
+            ErrorController::generate_error('city'), ErrorController::generate_error('agree')));
 
         if ($validator->fails()){
             dd('PB');
@@ -201,8 +202,8 @@ class AuthController extends BaseController
             'naf' => ['string'],
             'phone' => ['required', 'string', 'max:14'],
             'email' => ['required', 'email']
-        ], array_merge(ErrorController::generate_errorr('name_partner'), ErrorController::generate_errorr('max_partner'), ErrorController::generate_errorr('siret'), ErrorController::generate_errorr('naf'),
-            ErrorController::generate_errorr('phone'), ErrorController::generate_errorr('email')));
+        ], array_merge(ErrorController::generate_error('name_partner'), ErrorController::generate_error('max_partner'), ErrorController::generate_error('siret'), ErrorController::generate_error('naf'),
+            ErrorController::generate_error('phone'), ErrorController::generate_error('email')));
 
         if ($validator->fails()){
             return back()->withErrors($validator)->withInput();
@@ -254,9 +255,9 @@ class AuthController extends BaseController
             'address_details' => ['string'],
             'zip' => ['required', 'integer'],
             'city' => ['required', 'string'],
-        ], array_merge(ErrorController::generate_errorr('name_partner'), ErrorController::generate_errorr('max_partner'), ErrorController::generate_errorr('siret'),
-            ErrorController::generate_errorr('naf'), ErrorController::generate_errorr('phone'), ErrorController::generate_errorr('email'), ErrorController::generate_errorr('contact'),
-            ErrorController::generate_errorr('address'), ErrorController::generate_errorr('address_details'), ErrorController::generate_errorr('city')));
+        ], array_merge(ErrorController::generate_error('name_partner'), ErrorController::generate_error('max_partner'), ErrorController::generate_error('siret'),
+            ErrorController::generate_error('naf'), ErrorController::generate_error('phone'), ErrorController::generate_error('email'), ErrorController::generate_error('contact'),
+            ErrorController::generate_error('address'), ErrorController::generate_error('address_details'), ErrorController::generate_error('city')));
 
         if ($validator->fails()){
             return view('auth.partner.confirm.confirm2')->withErrors($validator)->with(DataController::get_confirm_data_view($request));

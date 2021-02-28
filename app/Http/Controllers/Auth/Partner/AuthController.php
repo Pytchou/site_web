@@ -76,7 +76,7 @@ class AuthController extends BaseController
     }
 
     /**
-     * Génère la vue HTML contenant le premier formulaire pour l'inscription
+     * Génère la vue HTML contenant le deuxièmes formulaires pour l'inscription
      *
      * @return \Illuminate\Contracts\View\View  Retourne une vue
      *
@@ -84,7 +84,7 @@ class AuthController extends BaseController
      */
 
     public function get_Partner_Form2(){
-        return view('auth.partner.confirm.confirm2');
+        return view('auth.partner.register.register2');
     }
 
     /**
@@ -276,4 +276,16 @@ class AuthController extends BaseController
         }
     }
 
+
+
+    /**
+     * Récupère la view HTML pour le formulaire d'enregistrement
+     *
+     * @return \Illuminate\Contracts\View\View Retourne une vue
+     *
+     * @author Clément
+     */
+    public function get_volunteer_login(){
+        return view("auth.partner.login.login");
+    }
 }

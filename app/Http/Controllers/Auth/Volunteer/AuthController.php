@@ -198,6 +198,7 @@ class AuthController extends BaseController
      *
      * @author Clément
      */
+
     public function voluteer_dashboard(){
         if(Auth::check()){
             $user = User::where('id', Auth::id())->first();

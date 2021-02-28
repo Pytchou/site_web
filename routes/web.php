@@ -59,6 +59,11 @@ Route::get('/benevole/dashboard', [BenevoleController::class, 'voluteer_dashboar
 Route::get('/partenaire/register1', function (){
     return view('auth.partner.register.register');
 });
+
+Route::get('/membres', function (){
+    return view('auth.team_desktop');
+});
+
 Route::post('/partenaire/register_form1', [PartnerController::class, 'form1_partner_validator']);
 
 Route::get('/partenaire/register2', function (){

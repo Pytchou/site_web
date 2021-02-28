@@ -166,7 +166,7 @@ class AuthController extends BaseController
      *
      * @author Clément
      */
-    public function volunteer_login_validator(Request $request){
+    public function get_volunteer_login_validator(Request $request){
 
         $validator = Validator::make($request->all(), [
             'email' => ['required', 'email'],
@@ -199,7 +199,7 @@ class AuthController extends BaseController
      * @author Clément
      */
 
-    public function voluteer_dashboard(){
+    public function get_voluteer_dashboard(){
         if(Auth::check()){
             $user = User::where('id', Auth::id())->first();
             return view("auth.volunteer.dashboard.". $user->dashboard_view_name);

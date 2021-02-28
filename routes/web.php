@@ -46,9 +46,9 @@ Route::get('/benevole/register2', [BenevoleController::class, 'get_Register_Form
 Route::post('/benevole/register_form2', [BenevoleController::class, 'get_form2_volunteer_validator']);
 
 Route::get("/benevole/login", [BenevoleController::class, 'get_volunteer_login'])->name('get_volunteer_login');
-Route::post('/benevole/login_validator', [BenevoleController::class, 'volunteer_login_validator']);
+Route::post('/benevole/login_validator', [BenevoleController::class, 'get_volunteer_login_validator']);
 
-Route::get('/benevole/dashboard', [BenevoleController::class, 'voluteer_dashboard']);
+Route::get('/benevole/dashboard', [BenevoleController::class, 'getvoluteer_dashboard']);
 
 
 
@@ -73,6 +73,10 @@ Route::post('/partenaire/register_partner_confirm_form1', [PartnerController::cl
 Route::get('/partenaire/confirm2', [PartnerController::class, 'get_Partner_confirm2']);
 Route::post('/partenaire/register_partner_confirm_notify', [PartnerController::class, 'get_register_partner_confirm_notify'])->name('register_partner_confirm_notify');
 
+Route::get("/partenaire/login", [PartnerController::class, 'get_partner_login'])->name('get_volunteer_login');
+Route::post('/partenaire/login_validator', [PartnerController::class, 'get_volunteer_login_validator']);
+
+Route::get('/partenaire/dashboard', [PartnerController::class, 'get_voluteer_dashboard']);
 /*
  * Clear Cache Route
  */

@@ -298,4 +298,15 @@ class AuthController extends BaseController
     public function get_volunteer_login(){
         return view("auth.partner.login.login");
     }
+
+    /**
+     * Récupère la view HTML pour le formulaire d'enregistrement
+     *
+     * @return \Illuminate\Contracts\View\View Retourne une vue
+     *
+     * @author Clément
+     */
+    public function get_partner_login(){
+        return view("auth.partner.login.login");
+    }
 }

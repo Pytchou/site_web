@@ -48,7 +48,7 @@ Route::post('/benevole/register_form2', [BenevoleController::class, 'get_form2_v
 Route::get("/benevole/login", [BenevoleController::class, 'get_volunteer_login'])->name('get_volunteer_login');
 Route::post('/benevole/login_validator', [BenevoleController::class, 'get_volunteer_login_validator']);
 
-Route::get('/benevole/dashboard', [BenevoleController::class, 'getvoluteer_dashboard']);
+Route::get('/benevole/dashboard', [BenevoleController::class, 'get_voluteer_dashboard']);
 
 
 

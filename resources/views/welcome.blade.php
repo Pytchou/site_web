@@ -67,7 +67,7 @@
                 <div class="container-btns">
                     <div class="btns-offers">
                         <i class="fas fa-map-marker-alt"></i>
-                        <a href="/register" target="_blank"><p>Nous rejoindre</p></a>
+                        <a href="/benevole/register1" target="_blank"><p>Nous rejoindre</p></a>
                     </div>
                 </div>
             </div>

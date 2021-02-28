@@ -107,6 +107,72 @@
         </div>
     </section>
 
+
+    @if(session('success'))
+
+    <!-- Trigger/Open The Modal -->
+        <button id="myBtn" style="display: none;"></button>
+
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2 class="center">Information</h2>
+                </div>
+                <div class="modal-body">
+                    <p>{{ session('success') }}</p>
+                </div>
+            </div>
+
+        </div>
+
+        <script type="text/javascript">
+
+            if (document.readyState === 'complete') {
+                document.getElementById('myBtn').click()
+            } else {
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.getElementById('myBtn').click()
+                });
+            }
+        </script>
+
+    @endif
+
+    @if(session('error'))
+
+    <!-- Trigger/Open The Modal -->
+        <button id="myBtn" style="display: none;"></button>
+
+        <div id="myModal" class="modal">
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2 class="center">Information</h2>
+                </div>
+                <div class="modal-body">
+                    <p>{{ session('error') }}</p>
+                </div>
+            </div>
+
+        </div>
+
+        <script type="text/javascript">
+
+            if (document.readyState === 'complete') {
+                document.getElementById('myBtn').click()
+            } else {
+                document.addEventListener('DOMContentLoaded', function() {
+                    document.getElementById('myBtn').click()
+                });
+            }
+        </script>
+
+    @endif
+
+
     <xml version="1.0" encoding="utf-8"?>
         <!-- Generator: Adobe Illustrator 24.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
         <svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

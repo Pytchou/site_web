@@ -131,7 +131,7 @@ class AuthController extends BaseController
             dans notre base de données.");
         }else{
             $token = str_replace('/', '', Hash::make('confirmation_token'));
-            $coor = Partner::get_lat_lng($request->address, $request->zip, $request->city);
+            $coor = DataController::get_lat_lng($request->address, $request->zip, $request->city);
 
             Mail::to('locascio.clement@gmail.com')->send(new Registered_Partner($request, $token));
 

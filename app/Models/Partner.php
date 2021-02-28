@@ -41,7 +41,8 @@ class Partner extends Model
         'zip',
         'city',
         'longitude',
-        'latitude'
+        'latitude',
+        'dashboard_view_name'
     ];
 
     /**

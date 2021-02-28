@@ -56,28 +56,24 @@ Route::get('/benevole/dashboard', [BenevoleController::class, 'voluteer_dashboar
  * Route Authentification Partenaire
  */
 
-Route::get('/partenaire/register1', function (){
-    return view('auth.partner.register.register');
-});
+Route::get('/partenaire/register1', [PartnerController::class, 'get_Partner_Form1']);
 
 Route::get('/membres', function (){
     return view('auth.partner.team_desktop');
 });
 
-Route::post('/partenaire/register_form1', [PartnerController::class, 'form1_partner_validator']);
+Route::post('/partenaire/register_form1', [PartnerController::class, 'get_form1_partner_validator']);
 
-Route::get('/partenaire/register2', function (){
-    return view('auth.partner.register.register2');
-});
-Route::post('/partenaire/register_form2', [PartnerController::class, 'form2_partner_validator']);
+Route::get('/partenaire/register2', [PartnerController::class, 'get_Partner_Form2']);
+Route::post('/partenaire/register_form2', [PartnerController::class, 'get_form2_partner_validator']);
 
 Route::get('/partenaire/confirm2', function(){
-    return view('auth.partner.confirm.confirm2');
+
 });
 
-Route::get('/partenaire/confirm/{name_partner}/{token}', [PartnerController::class, 'register_partner_confirm_data']);
-Route::post('/partenaire/register_partner_confirm_form1', [PartnerController::class, 'register_partner_confirm_form1']);
-Route::post('/partenaire/register_partner_confirm_notify', [PartnerController::class, 'register_partner_confirm_notify'])->name('register_partner_confirm_notify');
+Route::get('/partenaire/confirm/{name_partner}/{token}', [PartnerController::class, 'set_register_partner_confirm_data']);
+Route::post('/partenaire/register_partner_confirm_form1', [PartnerController::class, 'get_register_partner_confirm_form1']);
+Route::post('/partenaire/register_partner_confirm_notify', [PartnerController::class, 'get_register_partner_confirm_notify'])->name('register_partner_confirm_notify');
 
 /*
  * Clear Cache Route

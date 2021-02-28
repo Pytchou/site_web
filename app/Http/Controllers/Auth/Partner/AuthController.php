@@ -24,9 +24,20 @@ use Illuminate\Support\Facades\Validator;
 class AuthController extends BaseController
 {
 
-
     /**
      * Génère la vue HTML contenant le premier formulaire pour l'inscription
+     *
+     * @return \Illuminate\Contracts\View\View  Retourne une vue
+     *
+     * @author Clément
+     */
+
+    public function get_Partner_Form1(){
+        return view('auth.partner.register.register');
+    }
+
+    /**
+     * Validate si les donnes sont bien des string, avec une longeur max de X, ...
      *
      * @param Request $request Récupère les donnéees envoyés par le formulaire
      *
@@ -35,31 +46,44 @@ class AuthController extends BaseController
      * @author Clément
      */
 
-    public function form1_partner_validator(Request $request){
-    $validator = Validator::make($request->all(), [
-        'name_partner' => ['required', 'string'],
-        'max_partner' => ['required', 'integer', 'max:2147483647'],
-        'siret' => ['string'],
-        'naf' => ['string'],
-        'phone' => ['required', 'string', 'max:14'],
-        'email' => ['required', 'email']
-    ], array_merge(User::generate_error('name_partner'), User::generate_error('max_partner'), User::generate_error('siret'), User::generate_error('naf'),
-        User::generate_error('phone'), User::generate_error('email')));
+    public function get_form1_partner_validator(Request $request){
 
-    if ($validator->fails()){
-        return back()->withErrors($validator)->withInput();
+        $validator = Validator::make($request->all(), [
+            'name_partner' => ['required', 'string'],
+            'max_partner' => ['required', 'integer', 'max:2147483647'],
+            'siret' => ['string'],
+            'naf' => ['string'],
+            'phone' => ['required', 'string', 'max:14'],
+            'email' => ['required', 'email']
+        ], array_merge(User::generate_error('name_partner'), User::generate_error('max_partner'), User::generate_error('siret'), User::generate_error('naf'),
+            User::generate_error('phone'), User::generate_error('email')));
+
+        if ($validator->fails()){
+            return back()->withErrors($validator)->withInput();
+        }
+
+
+        return view('auth.partner.register.register2',[
+            'name_partner' => $request->name_partner,
+            'max_partner' => $request->max_partner,
+            'siret' => $request->siret,
+            'naf' => $request->naf,
+            'phone' => $request->phone,
+            'email' => $request->email
+        ]);
     }
 
+    /**
+     * Génère la vue HTML contenant le premier formulaire pour l'inscription
+     *
+     * @return \Illuminate\Contracts\View\View  Retourne une vue
+     *
+     * @author Clément
+     */
 
-    return view('auth.partner.register.register2',[
-        'name_partner' => $request->name_partner,
-        'max_partner' => $request->max_partner,
-        'siret' => $request->siret,
-        'naf' => $request->naf,
-        'phone' => $request->phone,
-        'email' => $request->email
-    ]);
-}
+    public function get_Partner_Form2(){
+        return view('auth.partner.confirm.confirm2');
+    }
 
     /**
      * Valide si les donnes sont bien des string, avec une longeur max de X, ... ET Envoie un email de creation
@@ -71,7 +95,7 @@ class AuthController extends BaseController
      *
      * @author Clément
      */
-    public function form2_partner_validator(Request $request){
+    public function get_form2_partner_validator(Request $request){
 
         $validator = Validator::make($request->all(), [
             'name_partner' => ['required', 'string'],
@@ -143,7 +167,7 @@ class AuthController extends BaseController
      *
      * @author Clément
      */
-    public function register_partner_confirm_data($name_partner, $token){
+    public function set_register_partner_confirm_data($name_partner, $token){
         $partner = Partner::where('name', $name_partner)->where('confirmation_token', $token)->first();
 
         if($partner) {
@@ -157,12 +181,15 @@ class AuthController extends BaseController
 
     /**
      * Valide  si les donnes sont bien des string, avec une longeur max de X, ...
+     *
      * @param Request $request Récupère les donnéees envoyés par le formulaire
+     *
      * @return \Illuminate\Contracts\View\View Retourne une vue
      * @return \Illuminate\Http\RedirectResponse Ou Retourne une redirection vers un URI
+     *
      * @author Clément
      */
-    public function register_partner_confirm_form1(Request $request){
+    public function get_register_partner_confirm_form1(Request $request){
 
         $validator = Validator::make($request->all(), [
             'id' => ['required', 'integer'],
@@ -198,7 +225,7 @@ class AuthController extends BaseController
      *
      * @author Clément
      */
-    public function register_partner_confirm_notify(Request $request){
+    public function get_register_partner_confirm_notify(Request $request){
 
         $validator = Validator::make($request->all(), [
             'id' => ['required', 'integer'],

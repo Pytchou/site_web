@@ -16,7 +16,9 @@ class HomeController extends Controller
      */
     public function get_home_view(){
         $partners = Partner::all();
-        dd($partners->latitude);
+        return view('welcome')->with([
+            'partners' => $partners
+        ]);
     }
 
 }

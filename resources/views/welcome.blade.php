@@ -41,6 +41,10 @@
             <h4>pour avoir plus d'infos</h4>
         </div>
         <div class="list">
+            @foreach($partners as $partner)
+                <div class="item js-marker" data-lat="{{$partner->latitude}}" data-lng="{{$partner->longitude}}" data-place_restante="128" data-title="Centre Bordeaux Croix Rouge" data-email="Aucune donnée"
+                     data-phone="05 56 52 34 85" data-address="50 Rue Ferrere"></div>
+            @endforeach
             <div class="item js-marker" data-lat="44.837528228759766" data-lng="-0.5740066766738892" data-place_restante="128" data-title="Centre Bordeaux Croix Rouge" data-email="Aucune donnée" data-phone="05 56 52 34 85" data-address="50 Rue Ferrere"></div>
             <div class="item js-marker" data-lat="44.8356819152832" data-lng="-0.5753112435340881" data-place_restante="185" data-title="Centre Bordeaux Banque Alimentaire" data-email="ba330@banquealimentaire.org" data-phone="05 56 43 10 63" data-address="15 rue Bougainville"></div>
             <div class="item js-marker" data-lat="44.8302308" data-lng="-0.5618266" data-title="Centre Bordeaux Resto du Coeur" data-place_restante="85" data-email=" contact@restosducoeur.org" data-phone="05 57 95 87 55" data-address="14 Rue du Fort Louis"></div>

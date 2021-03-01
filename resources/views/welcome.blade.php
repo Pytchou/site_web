@@ -44,7 +44,7 @@
             @foreach($partners as $partner)
                 <div class="item js-marker" data-lat="{{$partner->latitude}}" data-lng="{{$partner->longitude}}" data-place_restante="{{$partner->volunteers_max_score}}"
                      data-title="{{$partner->name}}" data-email="{{$partner->email}}"
-                     data-phone="{{$partner->phone}}" data-address="{{$partner->adresse}}, {{$partner->city}}"></div>
+                     data-phone="{{$partner->phone}}" data-address="{{$partner->address}}, {{$partner->city}}"></div>
             @endforeach
             <div class="item js-marker" data-lat="44.837528228759766" data-lng="-0.5740066766738892" data-place_restante="128" data-title="Centre Bordeaux Croix Rouge" data-email="Aucune donnée" data-phone="05 56 52 34 85" data-address="50 Rue Ferrere"></div>
             <div class="item js-marker" data-lat="44.8356819152832" data-lng="-0.5753112435340881" data-place_restante="185" data-title="Centre Bordeaux Banque Alimentaire" data-email="ba330@banquealimentaire.org" data-phone="05 56 43 10 63" data-address="15 rue Bougainville"></div>

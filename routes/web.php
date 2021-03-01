@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\Volunteer\AuthController as BenevoleController;
 use App\Http\Controllers\Auth\Partner\AuthController as PartnerController;
 use App\Http\Controllers\Reglementation\ReglementationController as ReglementationController;
+use App\Http\Controllers\HomeController as HomeController;
 
 session_start();
 
@@ -22,9 +23,7 @@ session_start();
  * Route accueil
  */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
+Route::get('/', [HomeController::class, 'get_home_view'])->name('welcome');
 
 
 /*
